@@ -37,7 +37,7 @@ export default function Home() {
       {/* =========================================
           HERO SECTION
       ========================================= */}
-      <section id="home" className="relative min-h-[90vh] flex items-center pt-20 px-6 bg-slate-50 overflow-hidden">
+      <section id="home" className="relative min-h-screen flex items-center pt-20 px-6 bg-slate-50 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute top-0 right-0 w-full h-full opacity-30 pointer-events-none">
           <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-br from-primary-cyan/10 to-blue-100/20 rounded-full blur-[80px]"></div>
@@ -372,8 +372,7 @@ export default function Home() {
                     <Phone className="text-primary-cyan" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900 text-lg">WhatsApp / Telefone</h4>
-                    <p className="text-slate-500 mb-2">Comercial e Suporte</p>
+                    <h4 className="font-bold text-slate-900 text-lg">Contato</h4>
                     <a href="https://wa.me/554198002461" className="text-lg font-bold text-primary-cyan hover:underline">
                       (41) 98002-461
                     </a>
