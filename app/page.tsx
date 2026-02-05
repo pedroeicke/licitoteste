@@ -65,12 +65,13 @@ export default function Home() {
           <div className="absolute top-[20%] right-[10%] w-[500px] h-[500px] bg-gradient-to-br from-green-100/40 to-emerald-100/40 rounded-full blur-[80px]"></div>
         </div>
 
-        {/* Decorative Dots Hero */}
-        <div className="absolute top-32 left-10 opacity-60 hidden xl:block">
-          <DecorativeDots width={4} height={6} color="cyan" />
-        </div>
+
 
         <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
+          {/* Decorative Dots Hero */}
+          <div className="absolute top-0 -left-24 opacity-60 hidden xl:block">
+            <DecorativeDots width={4} height={6} color="cyan" />
+          </div>
           <div
             className="space-y-6"
           >
@@ -148,7 +149,7 @@ export default function Home() {
           MODULES OVERVIEW
       ========================================= */}
       <section className="py-24 bg-white relative">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 relative">
           <div className="text-center mb-12 md:mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Nossa Tecnologia</h2>
             <p className="text-slate-500 max-w-2xl mx-auto">
@@ -157,10 +158,10 @@ export default function Home() {
           </div>
 
           {/* Decorative Dots Modules */}
-          <div className="absolute -left-4 top-1/2 -translate-y-1/2 opacity-40 hidden xl:block">
+          <div className="absolute -left-16 top-1/2 -translate-y-1/2 opacity-40 hidden xl:block">
             <DecorativeDots width={3} height={8} color="green" />
           </div>
-          <div className="absolute right-10 top-20 opacity-30 hidden xl:block">
+          <div className="absolute -right-16 top-20 opacity-30 hidden xl:block">
             <DecorativeDots width={6} height={3} color="cyan" />
           </div>
 
