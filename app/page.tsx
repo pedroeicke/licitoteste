@@ -2,12 +2,14 @@
 
 import { motion, useScroll, useTransform, Variants } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { getLogos } from "@/app/actions";
 import Button from "@/components/ui/Button";
 import MockupWindow from "@/components/ui/MockupWindow";
 import ChatInterface from "@/components/ui/ChatInterface";
-import GeneratorMockup from "@/components/ui/GeneratorMockup";
+
 import TrainingMockup from "@/components/ui/TrainingMockup";
+import ClientsCarousel from "@/components/ui/ClientsCarousel";
 import DecorativeDots from "@/components/ui/DecorativeDots";
 import {
   Copy, Database, Settings, ShieldCheck, ChevronDown, ChevronRight,
@@ -32,6 +34,20 @@ const staggerContainer: Variants = {
 };
 
 export default function Home() {
+  const [logos, setLogos] = useState<string[]>([]);
+
+  useEffect(() => {
+    getLogos().then(setLogos);
+  }, []);
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 2.0;
+    }
+  }, []);
+
   return (
     <div className="overflow-hidden">
       {/* =========================================
@@ -83,7 +99,21 @@ export default function Home() {
               <div className="absolute -inset-4 bg-gradient-to-tr from-primary-cyan/30 to-primary-green/30 rounded-[30px] blur-2xl -z-10 translate-y-4"></div>
 
               <MockupWindow className="shadow-2xl shadow-cyan-900/10 h-[500px]">
-                <ChatInterface />
+                <div className="relative w-full h-full bg-slate-900 overflow-hidden">
+                  <video
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    poster="/placeholder-video-poster.jpg" // Optional: You can remove or update this
+                  >
+                    <source src="/herovideo.mp4" type="video/mp4" />
+                    Seu navegador não suporta vídeos.
+                  </video>
+                  {/* Overlay to ensure text readability if needed, or just let the video shine */}
+
+                </div>
               </MockupWindow>
 
               {/* Floating Badge */}
@@ -218,7 +248,19 @@ export default function Home() {
             <div className="relative transform hover:scale-[1.02] transition-transform duration-500">
               <div className="absolute -inset-4 bg-gradient-to-r from-cyan-200 to-blue-200 rounded-[2rem] opacity-30 blur-xl"></div>
               <MockupWindow className="relative z-10 shadow-2xl border-slate-200/60">
-                <GeneratorMockup />
+                <div className="relative w-full aspect-[1920/950] bg-slate-900 overflow-hidden">
+                  <video
+                    ref={videoRef}
+                    className="w-full h-full object-cover object-bottom scale-[1.01]"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  >
+                    <source src="/videos2.mp4" type="video/mp4" />
+                    Seu navegador não suporta vídeos.
+                  </video>
+                </div>
               </MockupWindow>
 
               {/* Badge */}
@@ -324,27 +366,17 @@ export default function Home() {
       </section>
 
       {/* =========================================
-          FAQ SECTION
+          CLIENTS SECTION
       ========================================= */}
-      <section id="faq" className="py-24 bg-slate-50">
-        <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="text-3xl font-bold text-center mb-4 text-slate-900">Perguntas Frequentes</h2>
-          <p className="text-center text-slate-600 mb-12">Tire suas dúvidas sobre a plataforma líder em IA para licitações.</p>
-
-
-
-          <div className="space-y-4">
-            {[
-              { q: "Posso personalizar a IA?", a: "Sim. A IA pode ser personalizada para atender às necessidades específicas do seu órgão, integrando sistemas e customizando respostas." },
-              { q: "Quais documentos são gerados?", a: "ETP, DFD, Termo de Referência, Mapa de Risco, Ata, Edital e Contrato." },
-              { q: "Como faço para começar?", a: "Agende uma demonstração e receba instruções para contratação, configuração e treinamento inicial." },
-              { q: "A IA está atualizada com a legislação vigente?", a: "Sim, a IA é constantemente treinada para refletir mudanças legislativas, garantindo segurança jurídica." }
-            ].map((item, i) => (
-              <FAQItem key={i} question={item.q} answer={item.a} />
-            ))}
-          </div>
+      <section id="clientes" className="py-16 bg-white border-b border-slate-100">
+        <div className="container mx-auto px-6 mb-8 text-center">
+          <span className="text-primary-cyan font-bold tracking-widest uppercase text-xs mb-2 block">Confiança</span>
+          <h2 className="text-4xl font-bold text-slate-900">Quem confia na gente</h2>
         </div>
+        <ClientsCarousel logos={logos} />
       </section>
+
+
 
       {/* =========================================
           CONTACT SECTION
@@ -449,15 +481,27 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Purpose Content Merged */}
-        <div className="mt-24 text-center max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 leading-tight mb-6">
-            O propósito da licito.guru é vencer a insegurança jurídica e a burocracia nas licitações e nos contratos.
-          </h2>
-          <h3 className="text-2xl md:text-3xl font-bold text-primary-green mb-10">
-            Vem fazer parte desse movimento!
-          </h3>
-          <Button href="https://api.whatsapp.com/send/?phone=554198002461&text=Quero+agendar+uma+Demonstra%C3%A7%C3%A3o!&type=phone_number&app_absent=0" target="_blank">Agende uma Demonstração Agora</Button>
+
+      </section>
+
+      {/* =========================================
+          FAQ SECTION
+      ========================================= */}
+      <section id="faq" className="py-24 bg-slate-50">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <h2 className="text-3xl font-bold text-center mb-4 text-slate-900">Perguntas Frequentes</h2>
+          <p className="text-center text-slate-600 mb-12">Tire suas dúvidas sobre a plataforma líder em IA para licitações.</p>
+
+          <div className="space-y-4">
+            {[
+              { q: "Posso personalizar a IA?", a: "Sim. A IA pode ser personalizada para atender às necessidades específicas do seu órgão, integrando sistemas e customizando respostas." },
+              { q: "Quais documentos são gerados?", a: "ETP, DFD, Termo de Referência, Mapa de Risco, Ata, Edital e Contrato." },
+              { q: "Como faço para começar?", a: "Agende uma demonstração e receba instruções para contratação, configuração e treinamento inicial." },
+              { q: "A IA está atualizada com a legislação vigente?", a: "Sim, a IA é constantemente treinada para refletir mudanças legislativas, garantindo segurança jurídica." }
+            ].map((item, i) => (
+              <FAQItem key={i} question={item.q} answer={item.a} />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -465,6 +509,19 @@ export default function Home() {
       {/* =========================================
            PURPOSE SECTION
        ========================================= */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 leading-tight mb-6">
+              O propósito da licito.guru é vencer a insegurança jurídica e a burocracia nas licitações e nos contratos.
+            </h2>
+            <h3 className="text-2xl md:text-3xl font-bold text-primary-green mb-10">
+              Vem fazer parte desse movimento!
+            </h3>
+            <Button href="https://api.whatsapp.com/send/?phone=554198002461&text=Quero+agendar+uma+Demonstra%C3%A7%C3%A3o!&type=phone_number&app_absent=0" target="_blank">Agende uma Demonstração Agora</Button>
+          </div>
+        </div>
+      </section>
 
     </div >
   );
