@@ -41,10 +41,14 @@ export default function Home() {
   }, []);
 
   const videoRef = useRef<HTMLVideoElement>(null);
+  const customVideoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.playbackRate = 2.0;
+    }
+    if (customVideoRef.current) {
+      customVideoRef.current.playbackRate = 2.0; // Acelerar video 2x
     }
   }, []);
 
@@ -53,7 +57,7 @@ export default function Home() {
       {/* =========================================
           HERO SECTION
       ========================================= */}
-      <section id="home" className="relative min-h-screen flex items-center pt-20 px-6 bg-slate-50 overflow-hidden">
+      <section id="home" className="relative min-h-[100dvh] flex items-center pt-20 px-6 bg-slate-50 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute top-0 right-0 w-full h-full opacity-30 pointer-events-none">
           <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-br from-primary-cyan/10 to-blue-100/20 rounded-full blur-[80px]"></div>
@@ -66,11 +70,11 @@ export default function Home() {
           <DecorativeDots width={4} height={6} color="cyan" />
         </div>
 
-        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
           <div
             className="space-y-6"
           >
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-slate-900 leading-[1.1] mb-4">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-[1.1] mb-4">
               Parece mágica. <br /> É tecnologia.
             </h1>
             <h2 className="text-xl md:text-2xl font-medium text-primary-green leading-relaxed">
@@ -98,7 +102,7 @@ export default function Home() {
               {/* Glow Effect */}
               <div className="absolute -inset-4 bg-gradient-to-tr from-primary-cyan/30 to-primary-green/30 rounded-[30px] blur-2xl -z-10 translate-y-4"></div>
 
-              <MockupWindow className="shadow-2xl shadow-cyan-900/10 h-[500px]">
+              <MockupWindow className="shadow-2xl shadow-cyan-900/10 h-auto aspect-[4/3] md:h-[500px]">
                 <div className="relative w-full h-full bg-slate-900 overflow-hidden">
                   <video
                     className="w-full h-full object-cover"
@@ -145,7 +149,7 @@ export default function Home() {
       ========================================= */}
       <section className="py-24 bg-white relative">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12 md:mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Nossa Tecnologia</h2>
             <p className="text-slate-500 max-w-2xl mx-auto">
               Módulos desenvolvidos para transformar burocracia em estratégia.
@@ -162,7 +166,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8 relative z-10">
             {/* Module 1 */}
-            <div className="group glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 neon-hover">
+            <div className="group glass-card p-6 md:p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 neon-hover">
               <div className="w-14 h-14 bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Copy className="text-primary-cyan w-7 h-7" />
               </div>
@@ -176,7 +180,7 @@ export default function Home() {
             </div>
 
             {/* Module 2 */}
-            <div className="group glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 neon-hover relative overflow-hidden">
+            <div className="group glass-card p-6 md:p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 neon-hover relative overflow-hidden">
               <div className="absolute top-0 right-0 p-3">
                 <span className="bg-primary-cyan/20 text-primary-cyan text-[10px] font-bold px-2 py-1 rounded-full uppercase border border-primary-cyan/20">Destaque</span>
               </div>
@@ -193,7 +197,7 @@ export default function Home() {
             </div>
 
             {/* Module 3 */}
-            <div className="group glass-card p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 neon-hover">
+            <div className="group glass-card p-6 md:p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 neon-hover">
               <div className="w-14 h-14 bg-indigo-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Database className="text-indigo-500 w-7 h-7" />
               </div>
@@ -217,7 +221,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="text-primary-cyan font-bold tracking-widest uppercase text-sm mb-4 block">Módulo Gerador</span>
-              <h2 className="text-4xl font-bold text-slate-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
                 Semanas de trabalho <br />
                 <span className="text-gradient">em poucos minutos.</span>
               </h2>
@@ -285,16 +289,28 @@ export default function Home() {
         <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div className="order-2 md:order-1 relative">
             <div className="absolute -inset-4 bg-gradient-to-br from-green-200 to-emerald-100 rounded-[2rem] opacity-30 blur-xl"></div>
-            <MockupWindow className="relative z-10 shadow-2xl border-slate-200/60">
-              <TrainingMockup />
+            <MockupWindow className="relative z-10 shadow-2xl border-slate-200/60 h-[300px] md:h-auto">
+              <div className="relative w-full h-full md:aspect-[1920/950] bg-slate-900 overflow-hidden">
+                <video
+                  ref={customVideoRef}
+                  className="w-full h-full object-cover object-bottom scale-[1.01]"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                >
+                  <source src="/videocustom.mp4" type="video/mp4" />
+                  Seu navegador não suporta vídeos.
+                </video>
+              </div>
             </MockupWindow>
           </div>
 
           <div className="order-1 md:order-2">
             <span className="text-primary-green font-bold tracking-widest uppercase text-sm mb-4 block">Customização</span>
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
               Sua IA, Suas Regras. <br />
-              <span className="text-gradient">Totalmente Adaptável.</span>
+              <span className="text-gradient">Totalmente Customizável.</span>
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed mb-8">
               Não entregamos apenas uma IA genérica. Ensinamos a IA sobre a realidade do seu órgão.
@@ -320,7 +336,7 @@ export default function Home() {
                 Curadoria Especializada
               </div>
 
-              <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+              <h2 className="text-2xl md:text-5xl font-bold text-white leading-tight">
                 IA especializada com <br />
                 <span className="text-primary-cyan">Banco de Dados Exclusivo</span>
               </h2>
@@ -358,7 +374,7 @@ export default function Home() {
               <img
                 src="/JOEL E GUSTAVO.png"
                 alt="Professores Joel de Menezes Niebuhr e Gustavo Schiefler"
-                className="w-full max-w-2xl relative z-10 block -mb-14 lg:-mb-20 hover:scale-[1.02] transition-transform duration-500 origin-bottom"
+                className="w-full max-w-2xl relative z-10 block -mb-8 md:-mb-14 lg:-mb-20 hover:scale-[1.02] transition-transform duration-500 origin-bottom"
               />
             </div>
           </div>
@@ -440,7 +456,7 @@ export default function Home() {
             </div>
 
             {/* Form */}
-            <div className="bg-slate-50 p-8 md:p-10 rounded-3xl shadow-lg border border-slate-100 relative overflow-hidden">
+            <div className="bg-slate-50 p-6 md:p-10 rounded-3xl shadow-lg border border-slate-100 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary-cyan/10 rounded-full blur-3xl -mr-10 -mt-10"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-primary-green/10 rounded-full blur-3xl -ml-10 -mb-10"></div>
 

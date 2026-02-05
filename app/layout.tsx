@@ -13,6 +13,10 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Licito.guru | Inteligência Artificial para Licitações",
   description: "Ganhe tempo e qualidade nas licitações e contratos com nossa IA especializada.",
+  icons: {
+    icon: "/favicon.png",
+  },
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 };
 
 export default function RootLayout({
