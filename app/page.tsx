@@ -59,7 +59,7 @@ export default function Home() {
       {/* =========================================
           HERO SECTION
       ========================================= */}
-      <section id="home" className="relative min-h-[100dvh] flex items-center pt-20 px-6 bg-slate-50 overflow-hidden">
+      <section id="home" className="relative min-h-[100dvh] flex items-center pt-[calc(5rem+env(safe-area-inset-top))] md:pt-20 px-6 bg-slate-50 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute top-0 right-0 w-full h-full opacity-30 pointer-events-none">
           <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-br from-primary-cyan/10 to-blue-100/20 rounded-full blur-[80px]"></div>
@@ -75,16 +75,16 @@ export default function Home() {
             <DecorativeDots width={4} height={6} color="cyan" />
           </div>
           <div
-            className="space-y-6"
+            className="space-y-3 md:space-y-6"
           >
-            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-[1.1] mb-4">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-[1.1] mb-2 md:mb-4">
               Parece mágica. <br /> É tecnologia.
             </h1>
             <h2 className="text-xl md:text-2xl font-medium text-primary-green leading-relaxed">
               Ganhe tempo e qualidade nas licitações e contratos.
             </h2>
 
-            <p className="text-lg text-slate-600 max-w-lg leading-relaxed pt-2">
+            <p className="text-lg text-slate-600 max-w-lg leading-relaxed pt-1 md:pt-2">
               Obtenha respostas precisas e documentos técnicos com agilidade incomparável.
             </p>
 
@@ -98,7 +98,7 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="relative perspective-1000"
+            className="relative perspective-1000 mb-8 md:mb-0"
           >
             {/* Realistic App Mockup */}
             <div className="relative transform rotate-y-[-5deg] rotate-x-[5deg] hover:rotate-0 transition-transform duration-700 ease-out preserve-3d">
@@ -113,12 +113,11 @@ export default function Home() {
                     loop
                     muted
                     playsInline
-                    poster="/placeholder-video-poster.jpg" // Optional: You can remove or update this
+                    poster="/placeholder-video-poster.jpg"
                   >
                     <source src="/herovideo.mp4" type="video/mp4" />
                     Seu navegador não suporta vídeos.
                   </video>
-                  {/* Overlay to ensure text readability if needed, or just let the video shine */}
 
                 </div>
               </MockupWindow>
@@ -128,7 +127,7 @@ export default function Home() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1 }}
-                className="absolute -right-6 top-0 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-xl border border-slate-100 flex items-center gap-3"
+                className="absolute right-3 -top-3 md:-right-6 md:-top-4 bg-white/90 backdrop-blur-sm p-3 md:p-4 rounded-xl shadow-xl border border-slate-100 flex items-center gap-2 md:gap-3 max-w-[220px] md:max-w-none"
               >
                 <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg shadow-green-500/30">
                   <ShieldCheck size={20} className="text-white" />
@@ -233,7 +232,7 @@ export default function Home() {
                 <br /><br />
                 Mais agilidade, menos burocracia e total conformidade com a lei.
               </p>
-              <div className="grid grid-cols-2 gap-x-1 gap-y-4 mb-8 -ml-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-1 gap-y-4 mb-8 -ml-2">
                 {[
                   "Estudo Técnico Preliminar - ETP",
                   "Doc. de Formalização de Demanda - DFD",
@@ -272,7 +271,16 @@ export default function Home() {
               </MockupWindow>
 
               {/* Badge */}
-              <div className="absolute -left-6 bottom-10 bg-white p-3 rounded-xl shadow-lg border border-slate-100 flex items-center gap-3 animate-bounce-slow z-20">
+              <div className="absolute right-3 -bottom-4 bg-white p-2 rounded-xl shadow-lg border border-slate-100 flex items-center gap-2 md:hidden animate-bounce-slow z-20">
+                <div className="bg-primary-cyan/10 p-1.5 rounded-lg">
+                  <CheckCircle className="text-primary-cyan w-4 h-4" />
+                </div>
+                <div className="leading-tight">
+                  <div className="text-[10px] font-bold text-slate-800">Lei 14.133</div>
+                  <div className="text-[9px] text-slate-500">Compliance Automático</div>
+                </div>
+              </div>
+              <div className="absolute -left-6 bottom-10 bg-white p-3 rounded-xl shadow-lg border border-slate-100 hidden md:flex items-center gap-3 animate-bounce-slow z-20">
                 <div className="bg-primary-cyan/10 p-2 rounded-lg">
                   <CheckCircle className="text-primary-cyan w-5 h-5" />
                 </div>
@@ -366,14 +374,14 @@ export default function Home() {
       {/* =========================================
           BANCO EXCLUSIVO SECTION
       ========================================= */}
-      <section id="banco-exclusivo" className="pt-24 pb-0 relative overflow-hidden bg-slate-900">
+      <section id="banco-exclusivo" className="pt-12 md:pt-24 pb-0 relative overflow-hidden bg-slate-900">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-cyan rounded-full mix-blend-screen filter blur-[100px] opacity-10 animate-blob"></div>
 
         <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16">
+          <div className="grid lg:grid-cols-2 gap-4 md:gap-16">
             {/* Text Content */}
-            <div className="space-y-8 pb-24">
+            <div className="space-y-3 md:space-y-8 pb-12 md:pb-24">
               <div className="inline-block px-4 py-1.5 rounded-full border border-primary-cyan/30 bg-primary-cyan/10 text-primary-cyan text-xs font-bold uppercase tracking-wider">
                 Curadoria Especializada
               </div>
@@ -383,7 +391,7 @@ export default function Home() {
                 <span className="text-primary-cyan">Banco de Dados Exclusivo</span>
               </h2>
 
-              <div className="space-y-6 text-slate-300 leading-relaxed">
+              <div className="space-y-4 md:space-y-6 text-slate-300 leading-relaxed">
                 <p>
                   Reúne a jurisprudência do Tribunal de Contas da União, a regulamentação federal e as obras do
                   <strong className="text-white"> Professor Joel de Menezes Niebuhr</strong>, maior referência nacional em licitações e contratos.
@@ -394,7 +402,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="flex gap-4 pt-4">
+              <div className="flex gap-4 pt-6 md:pt-4">
                 <div className="flex flex-col gap-2 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
                   <BookOpen className="text-primary-cyan mb-2" />
                   <span className="text-white font-bold text-sm">Obras Doutrinárias</span>
@@ -416,7 +424,7 @@ export default function Home() {
               <img
                 src="/JOEL E GUSTAVO.png"
                 alt="Professores Joel de Menezes Niebuhr e Gustavo Schiefler"
-                className="w-full max-w-2xl relative z-10 block -mb-8 md:-mb-14 lg:-mb-20 hover:scale-[1.02] transition-transform duration-500 origin-bottom"
+                className="w-full max-w-2xl relative z-10 block -mb-4 md:-mb-14 lg:-mb-20 hover:scale-[1.02] transition-transform duration-500 origin-bottom"
               />
             </div>
           </div>
