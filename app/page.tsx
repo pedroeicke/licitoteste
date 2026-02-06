@@ -151,12 +151,18 @@ export default function Home() {
       ========================================= */}
       <section className="py-24 bg-white relative">
         <div className="container mx-auto px-6 relative">
-          <div className="text-center mb-12 md:mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="text-center mb-12 md:mb-20"
+          >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Nossa Tecnologia</h2>
             <p className="text-slate-500 max-w-4xl mx-auto">
               Módulo desenvolvido para gerar segurança jurídica e agilidade nos processos licitatorios
             </p>
-          </div>
+          </motion.div>
 
           {/* Decorative Dots Modules */}
           <div className="absolute -left-16 top-1/2 -translate-y-1/2 opacity-40 hidden xl:block">
@@ -166,7 +172,13 @@ export default function Home() {
             <DecorativeDots width={6} height={3} color="cyan" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="grid md:grid-cols-3 gap-8 relative z-10"
+          >
             {/* Module 1 */}
             <div className="group glass-card p-6 md:p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 neon-hover">
               <div className="w-14 h-14 bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -211,7 +223,7 @@ export default function Home() {
                 Saiba mais <ChevronRight size={14} />
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -221,7 +233,12 @@ export default function Home() {
       <section id="gerador" className="py-24 bg-slate-50">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
               <span className="bg-gradient-primary text-slate-900 font-bold tracking-wider uppercase text-xs mb-4 inline-block px-3 py-1 rounded-full">Módulo gerador de documentos</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
                 Semanas de trabalho <br />
@@ -249,10 +266,16 @@ export default function Home() {
                 ))}
               </div>
               <Button href="https://api.whatsapp.com/send/?phone=554198002461&text=Quero+agendar+uma+Demonstra%C3%A7%C3%A3o!&type=phone_number&app_absent=0" target="_blank">Solicitar Demonstração</Button>
-            </div>
+            </motion.div>
 
             {/* Right side Graphics */}
-            <div className="relative transform hover:scale-[1.02] transition-transform duration-500">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="relative transform hover:scale-[1.02] transition-transform duration-500"
+            >
               <div className="absolute -inset-4 bg-gradient-to-r from-cyan-200 to-blue-200 rounded-[2rem] opacity-30 blur-xl"></div>
               <MockupWindow className="relative z-10 shadow-2xl border-slate-200/60">
                 <div className="relative w-full aspect-[1920/950] bg-slate-900 overflow-hidden">
@@ -289,7 +312,7 @@ export default function Home() {
                   <div className="text-[10px] text-slate-500">Compliance Automático</div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -299,7 +322,13 @@ export default function Home() {
       ========================================= */}
       <section id="ia-personalizada" className="py-24 bg-white">
         <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-          <div className="order-2 md:order-1 relative">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="order-2 md:order-1 relative"
+          >
             <div className="absolute -inset-4 bg-gradient-to-br from-green-200 to-emerald-100 rounded-[2rem] opacity-30 blur-xl"></div>
             <MockupWindow className="relative z-10 shadow-2xl border-slate-200/60 h-[300px] md:h-auto">
               <div className="relative w-full h-full md:aspect-[1920/950] bg-slate-900 overflow-hidden">
@@ -316,9 +345,15 @@ export default function Home() {
                 </video>
               </div>
             </MockupWindow>
-          </div>
+          </motion.div>
 
-          <div className="order-1 md:order-2">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="order-1 md:order-2"
+          >
             <span className="bg-gradient-primary text-slate-900 font-bold tracking-wider uppercase text-xs mb-4 inline-block px-3 py-1 rounded-full">Customização</span>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
               Sua IA, Suas Regras. <br />
@@ -329,7 +364,7 @@ export default function Home() {
               Integre seus modelos de editais, contratos padrão, pareceres jurídicos e normas internas.
             </p>
             <Button href="https://api.whatsapp.com/send/?phone=554198002461&text=Tenho+interesse+em+uma+IA+Exclusiva+para+meu+%C3%B3rg%C3%A3o!&type=phone_number&app_absent=0" target="_blank">Peça sua IA Exclusiva</Button>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -338,7 +373,12 @@ export default function Home() {
       ========================================= */}
       <section id="modulo-consultoria" className="py-24 bg-slate-50">
         <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             <span className="bg-gradient-primary text-slate-900 font-bold tracking-wider uppercase text-xs mb-4 inline-block px-3 py-1 rounded-full">Módulo Consultoria</span>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
               Tire suas dúvidas <br />
@@ -348,9 +388,15 @@ export default function Home() {
               O servidor pode tirar dúvidas jurídicas ou operacionais sobre licitações e contratos e obter respostas claras e justificadas quando quiser.
             </p>
             <Button href="https://api.whatsapp.com/send/?phone=554198002461&text=Gostaria+de+conhecer+o+m%C3%B3dulo+de+Consultoria!&type=phone_number&app_absent=0" target="_blank">Conhecer Consultoria</Button>
-          </div>
+          </motion.div>
 
-          <div className="relative">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="relative"
+          >
             <div className="absolute -inset-4 bg-gradient-to-l from-cyan-200 to-blue-200 rounded-[2rem] opacity-30 blur-xl"></div>
             <MockupWindow className="relative z-10 shadow-2xl border-slate-200/60 h-auto">
               <div className="relative w-full bg-slate-900 overflow-hidden">
@@ -367,7 +413,7 @@ export default function Home() {
                 </video>
               </div>
             </MockupWindow>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -381,7 +427,13 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-4 md:gap-16">
             {/* Text Content */}
-            <div className="space-y-3 md:space-y-8 pb-12 md:pb-24">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="space-y-3 md:space-y-8 pb-12 md:pb-24"
+            >
               <div className="inline-block px-4 py-1.5 rounded-full border border-primary-cyan/30 bg-primary-cyan/10 text-primary-cyan text-xs font-bold uppercase tracking-wider">
                 Curadoria Especializada
               </div>
@@ -414,10 +466,16 @@ export default function Home() {
                   <span className="text-slate-400 text-xs">Decisões selecionadas</span>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Founders Image */}
-            <div className="relative flex justify-center items-end h-full">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="relative flex justify-center items-end h-full"
+            >
               {/* Glow behind image */}
               <div className="absolute w-[90%] h-[90%] bg-primary-cyan/20 blur-[120px] rounded-full -z-10 top-10"></div>
 
@@ -426,7 +484,7 @@ export default function Home() {
                 alt="Professores Joel de Menezes Niebuhr e Gustavo Schiefler"
                 className="w-full max-w-2xl relative z-10 block -mb-4 md:-mb-14 lg:-mb-20 hover:scale-[1.02] transition-transform duration-500 origin-bottom"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -435,10 +493,16 @@ export default function Home() {
           CLIENTS SECTION
       ========================================= */}
       <section id="clientes" className="py-16 bg-white border-b border-slate-100">
-        <div className="container mx-auto px-6 mb-8 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="container mx-auto px-6 mb-8 text-center"
+        >
 
           <h2 className="text-4xl font-bold text-slate-900">Quem confia na gente</h2>
-        </div>
+        </motion.div>
         <ClientsCarousel logos={logos} />
       </section>
 
