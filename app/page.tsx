@@ -236,7 +236,7 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-x-1 gap-y-4 mb-8 -ml-2">
                 {[
                   "Estudo Técnico Preliminar - ETP",
-                  "Doc. de Formalização de Demanda - DFD",
+                  "Documento de Formalização de Demanda (DFD)",
                   "Termo de Referência - TR",
                   "Documento do Edital",
                   "Ata",
@@ -245,7 +245,7 @@ export default function Home() {
                 ].map((doc, idx) => (
                   <div key={idx} className="flex items-center gap-2 text-sm text-slate-700">
                     <CheckCircle className="w-4 h-4 text-primary-cyan shrink-0" />
-                    <span>{doc}</span>
+                    <span className={doc.includes("(DFD)") ? "whitespace-nowrap text-[13px] md:text-sm" : ""}>{doc}</span>
                   </div>
                 ))}
               </div>
