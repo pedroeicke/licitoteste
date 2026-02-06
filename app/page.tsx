@@ -251,8 +251,8 @@ export default function Home() {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-1 gap-y-4 mb-8 -ml-2">
                 {[
+                  "Documento de Formalização de Demanda (DFD)",
                   "Estudo Técnico Preliminar - ETP",
-                  "Doc. de Formalização de Demanda - DFD",
                   "Termo de Referência - TR",
                   "Documento do Edital",
                   "Ata",
