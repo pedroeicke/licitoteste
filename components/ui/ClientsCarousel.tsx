@@ -44,12 +44,12 @@ export default function ClientsCarousel({ logos = [] }: ClientsCarouselProps) {
                         className="flex items-center gap-3 transition-opacity cursor-default"
                     >
                         {hasLogos ? (
-                            <div className="relative w-40 h-20 md:w-32 md:h-16 flex items-center justify-center">
+                            <div className="relative w-48 h-24 md:w-36 md:h-18 flex items-center justify-center">
                                 <Image
                                     src={item}
                                     alt="Client Logo"
                                     fill
-                                    sizes="(max-width: 768px) 160px, 128px"
+                                    sizes="(max-width: 768px) 192px, 144px"
                                     className="object-contain"
                                 />
                             </div>

@@ -59,7 +59,7 @@ export default function Home() {
       {/* =========================================
           HERO SECTION
       ========================================= */}
-      <section id="home" className="relative min-h-[100dvh] flex items-center pt-[calc(5rem+env(safe-area-inset-top))] md:pt-20 px-6 bg-slate-50 overflow-hidden">
+      <section id="home" className="relative min-h-[100dvh] flex items-center pt-20 px-6 bg-slate-50 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute top-0 right-0 w-full h-full opacity-30 pointer-events-none">
           <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-br from-primary-cyan/10 to-blue-100/20 rounded-full blur-[80px]"></div>
@@ -75,16 +75,16 @@ export default function Home() {
             <DecorativeDots width={4} height={6} color="cyan" />
           </div>
           <div
-            className="space-y-3 md:space-y-6"
+            className="space-y-6"
           >
-            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-[1.1] mb-2 md:mb-4">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-[1.1] mb-4">
               Parece mágica. <br /> É tecnologia.
             </h1>
-            <h2 className="text-xl md:text-2xl font-medium text-primary-green leading-relaxed">
+            <h2 className="text-xl md:text-2xl font-medium text-primary-cyan leading-relaxed">
               Ganhe tempo e qualidade nas licitações e contratos.
             </h2>
 
-            <p className="text-lg text-slate-600 max-w-lg leading-relaxed pt-1 md:pt-2">
+            <p className="text-lg text-slate-600 max-w-lg leading-relaxed pt-2">
               Obtenha respostas precisas e documentos técnicos com agilidade incomparável.
             </p>
 
@@ -98,7 +98,7 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="relative perspective-1000 mb-8 md:mb-0"
+            className="relative perspective-1000"
           >
             {/* Realistic App Mockup */}
             <div className="relative transform rotate-y-[-5deg] rotate-x-[5deg] hover:rotate-0 transition-transform duration-700 ease-out preserve-3d">
@@ -113,11 +113,12 @@ export default function Home() {
                     loop
                     muted
                     playsInline
-                    poster="/placeholder-video-poster.jpg"
+                    poster="/placeholder-video-poster.jpg" // Optional: You can remove or update this
                   >
                     <source src="/herovideo.mp4" type="video/mp4" />
                     Seu navegador não suporta vídeos.
                   </video>
+                  {/* Overlay to ensure text readability if needed, or just let the video shine */}
 
                 </div>
               </MockupWindow>
@@ -127,7 +128,7 @@ export default function Home() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1 }}
-                className="absolute right-3 -top-3 md:-right-6 md:-top-4 bg-white/90 backdrop-blur-sm p-3 md:p-4 rounded-xl shadow-xl border border-slate-100 flex items-center gap-2 md:gap-3 max-w-[220px] md:max-w-none"
+                className="absolute -right-6 top-0 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-xl border border-slate-100 flex items-center gap-3"
               >
                 <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg shadow-green-500/30">
                   <ShieldCheck size={20} className="text-white" />
@@ -151,18 +152,12 @@ export default function Home() {
       ========================================= */}
       <section className="py-24 bg-white relative">
         <div className="container mx-auto px-6 relative">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="text-center mb-12 md:mb-20"
-          >
+          <div className="text-center mb-12 md:mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Nossa Tecnologia</h2>
             <p className="text-slate-500 max-w-4xl mx-auto">
               Módulo desenvolvido para gerar segurança jurídica e agilidade nos processos licitatorios
             </p>
-          </motion.div>
+          </div>
 
           {/* Decorative Dots Modules */}
           <div className="absolute -left-16 top-1/2 -translate-y-1/2 opacity-40 hidden xl:block">
@@ -172,13 +167,7 @@ export default function Home() {
             <DecorativeDots width={6} height={3} color="cyan" />
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="grid md:grid-cols-3 gap-8 relative z-10"
-          >
+          <div className="grid md:grid-cols-3 gap-8 relative z-10">
             {/* Module 1 */}
             <div className="group glass-card p-6 md:p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 neon-hover">
               <div className="w-14 h-14 bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -223,7 +212,7 @@ export default function Home() {
                 Saiba mais <ChevronRight size={14} />
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -233,12 +222,7 @@ export default function Home() {
       <section id="gerador" className="py-24 bg-slate-50">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.25 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-            >
+            <div>
               <span className="bg-gradient-primary text-slate-900 font-bold tracking-wider uppercase text-xs mb-4 inline-block px-3 py-1 rounded-full">Módulo gerador de documentos</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
                 Semanas de trabalho <br />
@@ -249,10 +233,10 @@ export default function Home() {
                 <br /><br />
                 Mais agilidade, menos burocracia e total conformidade com a lei.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-1 gap-y-4 mb-8 -ml-2">
+              <div className="grid grid-cols-2 gap-x-1 gap-y-4 mb-8 -ml-2">
                 {[
-                  "Documento de Formalização de Demanda (DFD)",
                   "Estudo Técnico Preliminar - ETP",
+                  "Doc. de Formalização de Demanda - DFD",
                   "Termo de Referência - TR",
                   "Documento do Edital",
                   "Ata",
@@ -266,16 +250,10 @@ export default function Home() {
                 ))}
               </div>
               <Button href="https://api.whatsapp.com/send/?phone=554198002461&text=Quero+agendar+uma+Demonstra%C3%A7%C3%A3o!&type=phone_number&app_absent=0" target="_blank">Solicitar Demonstração</Button>
-            </motion.div>
+            </div>
 
             {/* Right side Graphics */}
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.25 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="relative transform hover:scale-[1.02] transition-transform duration-500"
-            >
+            <div className="relative transform hover:scale-[1.02] transition-transform duration-500">
               <div className="absolute -inset-4 bg-gradient-to-r from-cyan-200 to-blue-200 rounded-[2rem] opacity-30 blur-xl"></div>
               <MockupWindow className="relative z-10 shadow-2xl border-slate-200/60">
                 <div className="relative w-full aspect-[1920/950] bg-slate-900 overflow-hidden">
@@ -294,16 +272,7 @@ export default function Home() {
               </MockupWindow>
 
               {/* Badge */}
-              <div className="absolute right-3 -bottom-4 bg-white p-2 rounded-xl shadow-lg border border-slate-100 flex items-center gap-2 md:hidden animate-bounce-slow z-20">
-                <div className="bg-primary-cyan/10 p-1.5 rounded-lg">
-                  <CheckCircle className="text-primary-cyan w-4 h-4" />
-                </div>
-                <div className="leading-tight">
-                  <div className="text-[10px] font-bold text-slate-800">Lei 14.133</div>
-                  <div className="text-[9px] text-slate-500">Compliance Automático</div>
-                </div>
-              </div>
-              <div className="absolute -left-6 bottom-10 bg-white p-3 rounded-xl shadow-lg border border-slate-100 hidden md:flex items-center gap-3 animate-bounce-slow z-20">
+              <div className="absolute -left-6 bottom-10 bg-white p-3 rounded-xl shadow-lg border border-slate-100 flex items-center gap-3 animate-bounce-slow z-20">
                 <div className="bg-primary-cyan/10 p-2 rounded-lg">
                   <CheckCircle className="text-primary-cyan w-5 h-5" />
                 </div>
@@ -312,7 +281,7 @@ export default function Home() {
                   <div className="text-[10px] text-slate-500">Compliance Automático</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -322,13 +291,7 @@ export default function Home() {
       ========================================= */}
       <section id="ia-personalizada" className="py-24 bg-white">
         <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="order-2 md:order-1 relative"
-          >
+          <div className="order-2 md:order-1 relative">
             <div className="absolute -inset-4 bg-gradient-to-br from-green-200 to-emerald-100 rounded-[2rem] opacity-30 blur-xl"></div>
             <MockupWindow className="relative z-10 shadow-2xl border-slate-200/60 h-[300px] md:h-auto">
               <div className="relative w-full h-full md:aspect-[1920/950] bg-slate-900 overflow-hidden">
@@ -345,26 +308,19 @@ export default function Home() {
                 </video>
               </div>
             </MockupWindow>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="order-1 md:order-2"
-          >
+          <div className="order-1 md:order-2">
             <span className="bg-gradient-primary text-slate-900 font-bold tracking-wider uppercase text-xs mb-4 inline-block px-3 py-1 rounded-full">Customização</span>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
               Sua IA, Suas Regras. <br />
               <span className="text-gradient">Totalmente Customizável.</span>
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed mb-8">
-              Não entregamos apenas uma IA genérica. Ensinamos a IA sobre a realidade do seu órgão.
-              Integre seus modelos de editais, contratos padrão, pareceres jurídicos e normas internas.
+              A licito.guru IA pode ser customizada para o seu órgão, com os seus editais, contratos, documentos técnicos, pareceres jurídicos e normas internas tudo isso customizado com a identidade do seu órgão
             </p>
             <Button href="https://api.whatsapp.com/send/?phone=554198002461&text=Tenho+interesse+em+uma+IA+Exclusiva+para+meu+%C3%B3rg%C3%A3o!&type=phone_number&app_absent=0" target="_blank">Peça sua IA Exclusiva</Button>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -373,12 +329,7 @@ export default function Home() {
       ========================================= */}
       <section id="modulo-consultoria" className="py-24 bg-slate-50">
         <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
+          <div>
             <span className="bg-gradient-primary text-slate-900 font-bold tracking-wider uppercase text-xs mb-4 inline-block px-3 py-1 rounded-full">Módulo Consultoria</span>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
               Tire suas dúvidas <br />
@@ -388,15 +339,9 @@ export default function Home() {
               O servidor pode tirar dúvidas jurídicas ou operacionais sobre licitações e contratos e obter respostas claras e justificadas quando quiser.
             </p>
             <Button href="https://api.whatsapp.com/send/?phone=554198002461&text=Gostaria+de+conhecer+o+m%C3%B3dulo+de+Consultoria!&type=phone_number&app_absent=0" target="_blank">Conhecer Consultoria</Button>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="relative"
-          >
+          <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-l from-cyan-200 to-blue-200 rounded-[2rem] opacity-30 blur-xl"></div>
             <MockupWindow className="relative z-10 shadow-2xl border-slate-200/60 h-auto">
               <div className="relative w-full bg-slate-900 overflow-hidden">
@@ -413,27 +358,21 @@ export default function Home() {
                 </video>
               </div>
             </MockupWindow>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* =========================================
           BANCO EXCLUSIVO SECTION
       ========================================= */}
-      <section id="banco-exclusivo" className="pt-12 md:pt-24 pb-0 relative overflow-hidden bg-slate-900">
+      <section id="banco-exclusivo" className="pt-24 pb-0 relative overflow-hidden bg-slate-900">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-cyan rounded-full mix-blend-screen filter blur-[100px] opacity-10 animate-blob"></div>
 
         <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-4 md:gap-16">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-16">
             {/* Text Content */}
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.25 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="space-y-3 md:space-y-8 pb-12 md:pb-24"
-            >
+            <div className="space-y-8 pb-0 md:pb-24">
               <div className="inline-block px-4 py-1.5 rounded-full border border-primary-cyan/30 bg-primary-cyan/10 text-primary-cyan text-xs font-bold uppercase tracking-wider">
                 Curadoria Especializada
               </div>
@@ -443,7 +382,7 @@ export default function Home() {
                 <span className="text-primary-cyan">Banco de Dados Exclusivo</span>
               </h2>
 
-              <div className="space-y-4 md:space-y-6 text-slate-300 leading-relaxed">
+              <div className="space-y-6 text-slate-300 leading-relaxed">
                 <p>
                   Reúne a jurisprudência do Tribunal de Contas da União, a regulamentação federal e as obras do
                   <strong className="text-white"> Professor Joel de Menezes Niebuhr</strong>, maior referência nacional em licitações e contratos.
@@ -454,7 +393,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="flex gap-4 pt-6 md:pt-4">
+              <div className="flex gap-4 pt-4">
                 <div className="flex flex-col gap-2 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
                   <BookOpen className="text-primary-cyan mb-2" />
                   <span className="text-white font-bold text-sm">Obras Doutrinárias</span>
@@ -466,25 +405,19 @@ export default function Home() {
                   <span className="text-slate-400 text-xs">Decisões selecionadas</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Founders Image */}
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.25 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="relative flex justify-center items-end h-full"
-            >
+            <div className="relative flex justify-center items-end h-full">
               {/* Glow behind image */}
               <div className="absolute w-[90%] h-[90%] bg-primary-cyan/20 blur-[120px] rounded-full -z-10 top-10"></div>
 
               <img
                 src="/JOEL E GUSTAVO.png"
                 alt="Professores Joel de Menezes Niebuhr e Gustavo Schiefler"
-                className="w-full max-w-2xl relative z-10 block -mb-4 md:-mb-14 lg:-mb-20 hover:scale-[1.02] transition-transform duration-500 origin-bottom"
+                className="w-full max-w-2xl relative z-10 block -mb-1 md:-mb-10 lg:-mb-14 hover:scale-[1.02] transition-transform duration-500 origin-bottom"
               />
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -492,17 +425,11 @@ export default function Home() {
       {/* =========================================
           CLIENTS SECTION
       ========================================= */}
-      <section id="clientes" className="py-16 bg-white border-b border-slate-100">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="container mx-auto px-6 mb-8 text-center"
-        >
+      <section id="clientes" className="pt-4 pb-16 md:py-16 bg-white border-b border-slate-100">
+        <div className="container mx-auto px-6 mb-8 text-center">
 
           <h2 className="text-4xl font-bold text-slate-900">Quem confia na gente</h2>
-        </motion.div>
+        </div>
         <ClientsCarousel logos={logos} />
       </section>
 
