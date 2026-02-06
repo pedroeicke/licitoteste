@@ -17,7 +17,7 @@ import {
   GitBranch, Layers,
   BookOpen, GraduationCap, Scale,
   Plus, Minus,
-  Mail, MapPin, Phone
+  Mail, MapPin, Phone, MessageCircle
 } from "lucide-react";
 
 const fadeInUp: Variants = {
@@ -42,6 +42,7 @@ export default function Home() {
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const customVideoRef = useRef<HTMLVideoElement>(null);
+  const consultingVideoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -50,6 +51,7 @@ export default function Home() {
     if (customVideoRef.current) {
       customVideoRef.current.playbackRate = 2.0; // Acelerar video 2x
     }
+    // Consulting video speed reset to 1x (default)
   }, []);
 
   return (
@@ -133,7 +135,7 @@ export default function Home() {
                 </div>
                 <div>
                   <div className="font-bold text-slate-800 text-sm">Base Jurídica</div>
-                  <div className="text-xs text-primary-cyan font-semibold">Atualizada 2024</div>
+                  <div className="text-xs text-primary-cyan font-semibold">Atualizada 2025</div>
                 </div>
               </motion.div>
             </div>
@@ -152,8 +154,8 @@ export default function Home() {
         <div className="container mx-auto px-6 relative">
           <div className="text-center mb-12 md:mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Nossa Tecnologia</h2>
-            <p className="text-slate-500 max-w-2xl mx-auto">
-              Módulos desenvolvidos para transformar burocracia em estratégia.
+            <p className="text-slate-500 max-w-4xl mx-auto">
+              Módulo desenvolvido para gerar segurança jurídica e agilidade nos processos licitatorios
             </p>
           </div>
 
@@ -173,7 +175,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Gerador de Documentos</h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                Semanas de trabalho se transformam em minutos. ETP, TR, Editais e Contratos gerados automaticamente.
+                Respondendo poucas perguntas, você gera documentos técnicos com agilidade.
               </p>
               <Link href="#gerador" className="text-primary-cyan font-semibold text-sm hover:underline flex items-center gap-1 group-hover:gap-2 transition-all">
                 Saiba mais <ChevronRight size={14} />
@@ -190,7 +192,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">IA Customizável</h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                Personalize a IA com seus próprios editais, pareceres e normas internas. Respostas aderentes à sua realidade.
+                A Licito.guru IA pode ser customizada para seu órgão, com seus documentos técnicos e normas internas, tudo isso customizado com a identidade do seu órgão.
               </p>
               <Link href="#ia-personalizada" className="text-primary-cyan font-semibold text-sm hover:underline flex items-center gap-1 group-hover:gap-2 transition-all">
                 Saiba mais <ChevronRight size={14} />
@@ -200,13 +202,13 @@ export default function Home() {
             {/* Module 3 */}
             <div className="group glass-card p-6 md:p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 neon-hover">
               <div className="w-14 h-14 bg-indigo-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Database className="text-indigo-500 w-7 h-7" />
+                <MessageCircle className="text-indigo-500 w-7 h-7" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Banco Exclusivo</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Módulo Consultoria</h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                Treinada com jurisprudência do TCU e obras do Prof. Joel de Menezes Niebuhr. Curadoria especializada.
+                Tire dúvidas jurídicas ou operacionais sobre licitações e contratos e obtenha respostas claras e justificadas quando quiser.
               </p>
-              <Link href="#banco-exclusivo" className="text-primary-cyan font-semibold text-sm hover:underline flex items-center gap-1 group-hover:gap-2 transition-all">
+              <Link href="#modulo-consultoria" className="text-primary-cyan font-semibold text-sm hover:underline flex items-center gap-1 group-hover:gap-2 transition-all">
                 Saiba mais <ChevronRight size={14} />
               </Link>
             </div>
@@ -221,27 +223,28 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-primary-cyan font-bold tracking-widest uppercase text-sm mb-4 block">Módulo Gerador</span>
+              <span className="bg-gradient-primary text-slate-900 font-bold tracking-wider uppercase text-xs mb-4 inline-block px-3 py-1 rounded-full">Módulo gerador de documentos</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
                 Semanas de trabalho <br />
                 <span className="text-gradient">em poucos minutos.</span>
               </h2>
               <p className="text-slate-600 leading-relaxed mb-8">
-                Basta interagir com nossa IA e responder a perguntas simples.
-                A tecnologia cuida da redação, alinhamento legislativo (Lei 14.133/2021) e formatação.
+                Basta responder algumas perguntas e a nossa IA faz todo o trabalho, entregando documentos completos, consistentes e alinhados à legislação vigente.
+                <br /><br />
+                Mais agilidade, menos burocracia e total conformidade com a lei.
               </p>
-              <div className="grid grid-cols-2 gap-4 mb-8">
+              <div className="grid grid-cols-2 gap-x-1 gap-y-4 mb-8 -ml-2">
                 {[
-                  "Estudo Técnico Preliminar (ETP)",
-                  "Documento de Formalização de Demanda",
-                  "Termo de Referência (TR)",
-                  "Mapa de Risco",
-                  "Ata de Registro de Preços",
-                  "Edital de Licitação",
-                  "Contrato Administrativo"
+                  "Estudo Técnico Preliminar - ETP",
+                  "Doc. de Formalização de Demanda - DFD",
+                  "Termo de Referência - TR",
+                  "Documento do Edital",
+                  "Ata",
+                  "Mapa de Riscos",
+                  "Contrato"
                 ].map((doc, idx) => (
                   <div key={idx} className="flex items-center gap-2 text-sm text-slate-700">
-                    <CheckCircle className="w-4 h-4 text-primary-green shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-primary-cyan shrink-0" />
                     <span>{doc}</span>
                   </div>
                 ))}
@@ -308,7 +311,7 @@ export default function Home() {
           </div>
 
           <div className="order-1 md:order-2">
-            <span className="text-primary-green font-bold tracking-widest uppercase text-sm mb-4 block">Customização</span>
+            <span className="bg-gradient-primary text-slate-900 font-bold tracking-wider uppercase text-xs mb-4 inline-block px-3 py-1 rounded-full">Customização</span>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
               Sua IA, Suas Regras. <br />
               <span className="text-gradient">Totalmente Customizável.</span>
@@ -318,6 +321,44 @@ export default function Home() {
               Integre seus modelos de editais, contratos padrão, pareceres jurídicos e normas internas.
             </p>
             <Button href="https://api.whatsapp.com/send/?phone=554198002461&text=Tenho+interesse+em+uma+IA+Exclusiva+para+meu+%C3%B3rg%C3%A3o!&type=phone_number&app_absent=0" target="_blank">Peça sua IA Exclusiva</Button>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================
+           MODULO CONSULTORIA SECTION
+      ========================================= */}
+      <section id="modulo-consultoria" className="py-24 bg-slate-50">
+        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <span className="bg-gradient-primary text-slate-900 font-bold tracking-wider uppercase text-xs mb-4 inline-block px-3 py-1 rounded-full">Módulo Consultoria</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+              Tire suas dúvidas <br />
+              <span className="text-gradient">na hora.</span>
+            </h2>
+            <p className="text-lg text-slate-600 leading-relaxed mb-8">
+              O servidor pode tirar dúvidas jurídicas ou operacionais sobre licitações e contratos e obter respostas claras e justificadas quando quiser.
+            </p>
+            <Button href="https://api.whatsapp.com/send/?phone=554198002461&text=Gostaria+de+conhecer+o+m%C3%B3dulo+de+Consultoria!&type=phone_number&app_absent=0" target="_blank">Conhecer Consultoria</Button>
+          </div>
+
+          <div className="relative">
+            <div className="absolute -inset-4 bg-gradient-to-l from-cyan-200 to-blue-200 rounded-[2rem] opacity-30 blur-xl"></div>
+            <MockupWindow className="relative z-10 shadow-2xl border-slate-200/60 h-auto">
+              <div className="relative w-full bg-slate-900 overflow-hidden">
+                <video
+                  ref={consultingVideoRef}
+                  className="w-full h-auto"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                >
+                  <source src="/herovideo.mp4" type="video/mp4" />
+                  Seu navegador não suporta vídeos.
+                </video>
+              </div>
+            </MockupWindow>
           </div>
         </div>
       </section>
@@ -387,7 +428,7 @@ export default function Home() {
       ========================================= */}
       <section id="clientes" className="py-16 bg-white border-b border-slate-100">
         <div className="container mx-auto px-6 mb-8 text-center">
-          <span className="text-primary-cyan font-bold tracking-widest uppercase text-xs mb-2 block">Confiança</span>
+
           <h2 className="text-4xl font-bold text-slate-900">Quem confia na gente</h2>
         </div>
         <ClientsCarousel logos={logos} />
@@ -422,8 +463,11 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-bold text-slate-900 text-lg">Contato</h4>
-                    <a href="https://wa.me/554198002461" className="text-lg font-bold text-primary-cyan hover:underline">
-                      (41) 98002-461
+                    <a href="tel:554832047194" className="text-lg font-bold text-primary-cyan hover:underline block">
+                      (48) 3204-7194
+                    </a>
+                    <a href="https://wa.me/554198002461" target="_blank" className="text-sm text-slate-500 hover:text-slate-700 hover:underline flex items-center gap-1 mt-1">
+                      Fale com a gente no WhatsApp
                     </a>
                   </div>
                 </div>
@@ -514,7 +558,9 @@ export default function Home() {
               { q: "Posso personalizar a IA?", a: "Sim. A IA pode ser personalizada para atender às necessidades específicas do seu órgão, integrando sistemas e customizando respostas." },
               { q: "Quais documentos são gerados?", a: "ETP, DFD, Termo de Referência, Mapa de Risco, Ata, Edital e Contrato." },
               { q: "Como faço para começar?", a: "Agende uma demonstração e receba instruções para contratação, configuração e treinamento inicial." },
-              { q: "A IA está atualizada com a legislação vigente?", a: "Sim, a IA é constantemente treinada para refletir mudanças legislativas, garantindo segurança jurídica." }
+              { q: "A IA está atualizada com a legislação vigente?", a: "Sim, a IA é constantemente treinada para refletir mudanças legislativas, garantindo segurança jurídica." },
+              { q: "Quantos usuários podem acessar a plataforma?", a: "Nos planos disponiveis, o número de usuários é ilimitado, permitindo que toda a equipe utilize a ferramenta sem restrições." },
+              { q: "Como é feito o suporte técnico?", a: "Oferecemos suporte técnico especializado, disponível para sanar dúvidas ou resolver problemas, garantindo uma experiência de uso tranquila e eficiente." }
             ].map((item, i) => (
               <FAQItem key={i} question={item.q} answer={item.a} />
             ))}

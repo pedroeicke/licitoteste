@@ -48,9 +48,9 @@ export default function ClientsCarousel({ logos = [] }: ClientsCarouselProps) {
                                 <Image
                                     src={item}
                                     alt="Client Logo"
-                                    width={128}
-                                    height={64}
-                                    className="object-contain max-h-full max-w-full"
+                                    fill
+                                    sizes="128px"
+                                    className="object-contain"
                                 />
                             </div>
                         ) : (

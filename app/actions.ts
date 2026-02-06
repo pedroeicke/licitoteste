@@ -10,6 +10,7 @@ export async function getLogos() {
             return [];
         }
         const files = fs.readdirSync(logosDir);
+        // console.log("Logos found:", files); // Debug logging removed
         const imageExtensions = ['.png', '.jpg', '.jpeg', '.svg', '.webp'];
 
         const logos = files
