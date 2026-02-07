@@ -78,7 +78,7 @@ export default function Home() {
             className="space-y-6"
           >
             <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-[1.1] mb-4">
-              Parece mágica. <br /> É tecnologia.
+              Parece mágica. <br /> <span className="text-gradient">É tecnologia.</span>
             </h1>
             <h2 className="text-xl md:text-2xl font-medium text-primary-cyan leading-relaxed">
               Ganhe tempo e qualidade nas licitações e contratos.
@@ -155,7 +155,7 @@ export default function Home() {
           <div className="text-center mb-12 md:mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Nossa Tecnologia</h2>
             <p className="text-slate-500 max-w-4xl mx-auto">
-              Módulo desenvolvido para gerar segurança jurídica e agilidade nos processos licitatorios
+              Módulos desenvolvidos para gerar segurança jurídica e agilidade nos processos licitatorios
             </p>
           </div>
 
@@ -192,7 +192,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">IA Customizável</h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                A Licito.guru IA pode ser customizada para seu órgão, com seus documentos técnicos e normas internas, tudo isso customizado com a identidade do seu órgão.
+                A licito.guru IA pode ser customizada para seu órgão, com seus documentos técnicos e normas internas, tudo isso customizado com a identidade do seu órgão.
               </p>
               <Link href="#ia-personalizada" className="text-primary-cyan font-semibold text-sm hover:underline flex items-center gap-1 group-hover:gap-2 transition-all">
                 Saiba mais <ChevronRight size={14} />

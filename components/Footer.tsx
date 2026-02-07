@@ -9,7 +9,7 @@ export default function Footer() {
                     {/* Brand */}
                     <div>
                         <Link href="#home" className="inline-block mb-4">
-                            <img src="/Logo licito.guru IA.png" alt="Licito.guru Logo" className="h-20 w-auto object-contain" />
+                            <img src="/Logo licito.guru IA.png" alt="licito.guru Logo" className="h-20 w-auto object-contain" />
                         </Link>
 
                     </div>
@@ -48,7 +48,7 @@ export default function Footer() {
 
                 <div className="border-t border-slate-200 pt-8 flex justify-center items-center text-[10px] text-slate-400">
                     <p className="text-center w-full">
-                        Direitos Reservados ©️ {new Date().getFullYear()} | Licito.Guru - CNPJ: 59.743.095/0001-86 | Av. Osvaldo Rodrigues Cabral, 1570, Centro, Florianópolis – SC, CEP 88015-710
+                        Direitos Reservados ©️ {new Date().getFullYear()} | licito.guru - CNPJ: 59.743.095/0001-86 | Av. Osvaldo Rodrigues Cabral, 1570, Centro, Florianópolis – SC, CEP 88015-710
                     </p>
                 </div>
             </div>

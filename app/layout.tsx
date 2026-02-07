@@ -11,7 +11,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Licito.guru | Inteligência Artificial para Licitações",
+  title: "licito.guru | Inteligência Artificial para Licitações",
   description: "Ganhe tempo e qualidade nas licitações e contratos com nossa IA especializada.",
   icons: {
     icon: "/favicon.png",
