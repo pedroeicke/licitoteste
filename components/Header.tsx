@@ -33,7 +33,7 @@ export default function Header() {
                     <Link
                         href="https://api.whatsapp.com/send/?phone=554198002461&text=Gostaria+de+fazer+um+teste+gr%C3%A1tis!&type=phone_number&app_absent=0"
                         target="_blank"
-                        className="flex items-center gap-2 bg-gradient-primary text-slate-900 font-bold px-6 py-2.5 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 transform"
+                        className="flex items-center gap-2 bg-gradient-primary text-dark-blue font-bold px-6 py-2.5 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 transform"
                     >
                         Testar Grátis
                         <ArrowRight className="w-4 h-4" />
@@ -42,7 +42,7 @@ export default function Header() {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="lg:hidden p-2 text-slate-800"
+                    className="lg:hidden p-2 text-dark-blue"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {isOpen ? <X /> : <Menu />}
@@ -66,7 +66,7 @@ export default function Header() {
                         href="https://api.whatsapp.com/send/?phone=554198002461&text=Gostaria+de+fazer+um+teste+gr%C3%A1tis!&type=phone_number&app_absent=0"
                         target="_blank"
                         onClick={() => setIsOpen(false)}
-                        className="w-full text-center bg-gradient-primary text-slate-900 font-bold px-6 py-3 rounded-full flex items-center justify-center gap-2"
+                        className="w-full text-center bg-gradient-primary text-dark-blue font-bold px-6 py-3 rounded-full flex items-center justify-center gap-2"
                     >
                         Testar Grátis
                         <ArrowRight className="w-4 h-4" />

@@ -5,7 +5,7 @@ export default function TrainingMockup() {
         <div className="bg-slate-50 flex flex-col h-[400px] w-full font-sans text-sm">
             {/* Dashboard Header */}
             <div className="p-6 bg-white border-b border-slate-200">
-                <h3 className="text-lg font-bold text-slate-800">Base de Conhecimento</h3>
+                <h3 className="text-lg font-bold text-dark-blue">Base de Conhecimento</h3>
                 <p className="text-slate-500 text-xs">Gerencie os documentos que a IA utiliza como referência.</p>
             </div>
 

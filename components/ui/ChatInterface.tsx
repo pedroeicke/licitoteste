@@ -47,13 +47,13 @@ export default function ChatInterface() {
                             <ul className="space-y-2 mt-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
                                 <li className="flex items-center gap-2 text-slate-600">
                                     <div className={`w-4 h-4 rounded border flex items-center justify-center ${step >= 2 ? "bg-primary-green border-primary-green" : "border-slate-300"}`}>
-                                        {step >= 2 && <CheckCircle size={10} className="text-slate-900" />}
+                                        {step >= 2 && <CheckCircle size={10} className="text-dark-blue" />}
                                     </div>
                                     Qual a quantidade estimada?
                                 </li>
                                 <li className="flex items-center gap-2 text-slate-600">
                                     <div className={`w-4 h-4 rounded border flex items-center justify-center ${step >= 2 ? "bg-primary-green border-primary-green" : "border-slate-300"}`}>
-                                        {step >= 2 && <CheckCircle size={10} className="text-slate-900" />}
+                                        {step >= 2 && <CheckCircle size={10} className="text-dark-blue" />}
                                     </div>
                                     Haverá garantia estendida?
                                 </li>
@@ -92,7 +92,7 @@ export default function ChatInterface() {
                             <div className="flex items-center gap-3 p-3 bg-indigo-50 rounded-lg border border-indigo-100">
                                 <FileText className="text-indigo-500" />
                                 <div>
-                                    <div className="font-bold text-slate-800 text-sm">TR_Notebooks_i7.docx</div>
+                                    <div className="font-bold text-dark-blue text-sm">TR_Notebooks_i7.docx</div>
                                     <div className="text-xs text-slate-500">Gerado com sucesso • 142KB</div>
                                 </div>
                                 <button className="ml-auto text-xs font-bold text-indigo-600 hover:underline">Baixar</button>

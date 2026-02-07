@@ -24,7 +24,7 @@ export default function GeneratorMockup() {
                         <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Etapas</div>
                         <div className="flex items-center gap-2 text-primary-cyan bg-cyan-50 p-2 rounded-lg border border-cyan-100">
                             <Check size={14} />
-                            <span className="font-medium text-slate-800">Objeto</span>
+                            <span className="font-medium text-dark-blue">Objeto</span>
                         </div>
                         <div className="flex items-center gap-2 text-slate-500 p-2">
                             <div className="w-3.5 h-3.5 rounded-full border-2 border-slate-300"></div>

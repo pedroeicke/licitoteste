@@ -135,7 +135,7 @@ export default function Home() {
                   <ShieldCheck size={20} className="text-white hidden md:block" />
                 </div>
                 <div>
-                  <div className="font-bold text-dark-blue text-[11px] md:text-sm">Base Jurídica</div>
+                  <div className="font-bold text-slate-800 text-[11px] md:text-sm">Base Jurídica</div>
                   <div className="text-[9px] md:text-xs text-primary-cyan font-semibold">Atualizada 2025</div>
                 </div>
               </motion.div>
@@ -278,7 +278,7 @@ export default function Home() {
                   <CheckCircle className="text-primary-cyan w-4 h-4 md:w-5 md:h-5" />
                 </div>
                 <div>
-                  <div className="text-[10px] md:text-xs font-bold text-dark-blue">Lei 14.133</div>
+                  <div className="text-[10px] md:text-xs font-bold text-slate-800">Lei 14.133</div>
                   <div className="text-[8px] md:text-[10px] text-slate-500">Compliance Automático</div>
                 </div>
               </div>
@@ -371,7 +371,7 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-cyan rounded-full mix-blend-screen filter blur-[100px] opacity-10 animate-blob"></div>
 
         <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-4 md:gap-16">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-16">
             {/* Text Content */}
             <div className="space-y-8 pb-0 md:pb-24">
               <div className="inline-block px-4 py-1.5 rounded-full border border-primary-cyan/30 bg-primary-cyan/10 text-primary-cyan text-xs font-bold uppercase tracking-wider">
@@ -505,7 +505,7 @@ export default function Home() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary-cyan/10 rounded-full blur-3xl -mr-10 -mt-10"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-primary-green/10 rounded-full blur-3xl -ml-10 -mb-10"></div>
 
-              <h3 className="text-2xl font-bold mb-6 text-dark-blue relative z-10">Agende sua Demonstração</h3>
+              <h3 className="text-2xl font-bold mb-6 text-slate-800 relative z-10">Agende sua Demonstração</h3>
               <form className="space-y-4 relative z-10">
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">Nome Completo</label>
@@ -599,7 +599,7 @@ function FAQItem({ question, answer }: { question: string, answer: string }) {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between p-6 text-left"
       >
-        <span className="font-bold text-dark-blue text-lg">{question}</span>
+        <span className="font-bold text-slate-800 text-lg">{question}</span>
         {isOpen ? <Minus className="text-primary-cyan shrink-0" /> : <Plus className="text-slate-400 shrink-0" />}
       </button>
       <div

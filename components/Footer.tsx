@@ -16,7 +16,7 @@ export default function Footer() {
 
                     {/* Links */}
                     <div>
-                        <h3 className="font-bold text-slate-800 mb-6">Navegação</h3>
+                        <h3 className="font-bold text-dark-blue mb-6">Navegação</h3>
                         <ul className="space-y-3 text-sm text-slate-600">
                             <li><Link href="#home" className="hover:text-primary-cyan transition-colors">Home</Link></li>
                             <li><Link href="#gerador" className="hover:text-primary-cyan transition-colors">Gerador de Documentos</Link></li>
@@ -28,7 +28,7 @@ export default function Footer() {
 
                     {/* Contact */}
                     <div>
-                        <h3 className="font-bold text-slate-800 mb-6">Contato</h3>
+                        <h3 className="font-bold text-dark-blue mb-6">Contato</h3>
                         <ul className="space-y-4 text-sm text-slate-600">
                             <li className="flex items-start gap-3">
                                 <MapPin className="w-5 h-5 text-primary-cyan shrink-0" />

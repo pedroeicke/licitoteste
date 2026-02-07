@@ -13,6 +13,7 @@ const config: Config = {
                     cyan: "#20BFF6",
                     green: "#45FE85",
                 },
+                "dark-blue": "#15253e",
                 background: "var(--background)",
                 foreground: "var(--foreground)",
             },
