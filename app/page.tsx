@@ -233,7 +233,7 @@ export default function Home() {
                 <br /><br />
                 Mais agilidade, menos burocracia e total conformidade com a lei.
               </p>
-              <div className="grid grid-cols-2 gap-x-1 gap-y-4 mb-8 -ml-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 md:auto-cols-max gap-x-0 gap-y-4 mb-8 -ml-2">
                 {[
                   "Estudo Técnico Preliminar - ETP",
                   "Documento de Formalização de Demanda (DFD)",
@@ -317,7 +317,7 @@ export default function Home() {
               <span className="text-gradient">Totalmente Customizável.</span>
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed mb-8">
-              A licito.guru IA pode ser customizada para o seu órgão, com os seus editais, contratos, documentos técnicos, pareceres jurídicos e normas internas tudo isso customizado com a identidade do seu órgão
+              A licito.guru IA pode ser customizada para o seu órgão, com os seus editais, contratos, documentos técnicos, pareceres jurídicos e normas internas, tudo isso customizado com a identidade do seu órgão.
             </p>
             <Button href="https://api.whatsapp.com/send/?phone=554198002461&text=Tenho+interesse+em+uma+IA+Exclusiva+para+meu+%C3%B3rg%C3%A3o!&type=phone_number&app_absent=0" target="_blank">Peça sua IA Exclusiva</Button>
           </div>
@@ -415,7 +415,7 @@ export default function Home() {
               <img
                 src="/JOEL E GUSTAVO.png"
                 alt="Professores Joel de Menezes Niebuhr e Gustavo Schiefler"
-                className="w-full max-w-2xl relative z-10 block -mb-1 md:-mb-10 lg:-mb-14 hover:scale-[1.02] transition-transform duration-500 origin-bottom"
+                className="w-full max-w-2xl relative z-10 block -mb-8 md:-mb-10 lg:-mb-14 hover:scale-[1.02] transition-transform duration-500 origin-bottom"
               />
             </div>
           </div>
@@ -575,7 +575,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 leading-tight mb-6">
-              O propósito da licito.guru é vencer a insegurança jurídica e a burocracia nas licitações e nos contratos.
+              O propósito da licito.guru é vencer a <span className="text-gradient">insegurança jurídica</span> e a <span className="text-gradient">burocracia</span> nas licitações e nos contratos.
             </h2>
             <h3 className="text-2xl md:text-3xl font-bold text-primary-green mb-10">
               Vem fazer parte desse movimento!
