@@ -42,7 +42,6 @@ export default function Home() {
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const customVideoRef = useRef<HTMLVideoElement>(null);
-  const consultingVideoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -51,7 +50,6 @@ export default function Home() {
     if (customVideoRef.current) {
       customVideoRef.current.playbackRate = 2.0; // Acelerar video 2x
     }
-    // Consulting video speed reset to 1x (default)
   }, []);
 
   return (
@@ -331,35 +329,22 @@ export default function Home() {
       <section id="modulo-consultoria" className="py-24 bg-slate-50">
         <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <span className="bg-gradient-primary text-dark-blue font-bold tracking-wider uppercase text-xs mb-4 inline-block px-3 py-1 rounded-full">Módulo Consultoria</span>
+            <span className="bg-gradient-primary text-dark-blue font-bold tracking-wider uppercase text-xs mb-4 inline-block px-3 py-1 rounded-full">Módulo Analisador de Documentos</span>
             <h2 className="text-3xl md:text-4xl font-bold text-dark-blue mb-6">
-              Tire suas dúvidas <br />
-              <span className="text-gradient">na hora.</span>
+              Evite Riscos Jurídicos. <br />
+              <span className="text-gradient">Analise Seus Editais em Instantes.</span>
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed mb-8">
-              O servidor pode tirar dúvidas jurídicas ou operacionais sobre licitações e contratos e obter respostas claras e justificadas quando quiser.
+              Permite aos usuários enviar documentos de contratação já existentes, como editais de licitação, e receber uma análise estruturada de conformidade jurídica. O sistema submete o documento a uma série de verificações desenvolvidas pela equipe especializada da licito.guru, gerando alertas de risco em diferentes níveis de gravidade, juntamente com sugestões concretas de revisão e aprimoramento. Faça o teste!
             </p>
             <Button href="https://api.whatsapp.com/send/?phone=554198002461&text=Gostaria+de+conhecer+o+m%C3%B3dulo+de+Consultoria!&type=phone_number&app_absent=0" target="_blank">Conhecer Consultoria</Button>
           </div>
 
-          <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-l from-cyan-200 to-blue-200 rounded-[2rem] opacity-30 blur-xl"></div>
-            <MockupWindow className="relative z-10 shadow-2xl border-slate-200/60 h-auto">
-              <div className="relative w-full bg-slate-900 overflow-hidden">
-                <video
-                  ref={consultingVideoRef}
-                  className="w-full h-auto"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                >
-                  <source src="/herovideo.mp4" type="video/mp4" />
-                  Seu navegador não suporta vídeos.
-                </video>
-              </div>
-            </MockupWindow>
-          </div>
+          <img
+            src="/mk2.png"
+            alt="Analisador de Documentos licito.guru"
+            className="w-full h-auto"
+          />
         </div>
       </section>
 
@@ -375,7 +360,7 @@ export default function Home() {
             {/* Text Content */}
             <div className="space-y-8 pb-0 md:pb-24">
               <div className="inline-block px-4 py-1.5 rounded-full border border-primary-cyan/30 bg-primary-cyan/10 text-primary-cyan text-xs font-bold uppercase tracking-wider">
-                Curadoria Especializada
+                Módulo Consultoria
               </div>
 
               <h2 className="text-2xl md:text-5xl font-bold text-white leading-tight">
@@ -385,12 +370,13 @@ export default function Home() {
 
               <div className="space-y-6 text-slate-300 leading-relaxed">
                 <p>
-                  Reúne a jurisprudência do Tribunal de Contas da União, a regulamentação federal e as obras do
-                  <strong className="text-white"> Professor Joel de Menezes Niebuhr</strong>, maior referência nacional em licitações e contratos.
+                  Tire suas dúvidas jurídicas ou operacionais sobres licitações e contratos, e obtenha respostas claras e justificadas quando quiser.
                 </p>
                 <p>
-                  A licito.guru IA foi treinada diretamente pelo <strong className="text-white">Professor Gustavo Schiefler</strong> e sua equipe.
-                  Por trás da tecnologia está a experiência e o filtro de um time altamente especializado.
+                  Reúne a jurisprudência do Tribunal de Contas da União, a regulamentação federal e as obras do Professor Joel de Menezes Niebuhr, maior referência nacional em licitações e contratos.
+                </p>
+                <p>
+                  A licito.guru IA foi treinada diretamente pelo Professor Gustavo Schiefler e sua equipe. Por trás da tecnologia está a experiência e o filtro de um time altamente especializado em licitações e contratos administrativos.
                 </p>
               </div>
 
