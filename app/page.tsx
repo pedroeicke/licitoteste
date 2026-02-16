@@ -75,12 +75,9 @@ export default function Home() {
           <div
             className="space-y-6"
           >
-            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold tracking-tight text-dark-blue leading-[1.1] mb-4">
-              Parece mágica. <br /> <span className="text-gradient">É tecnologia.</span>
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold tracking-tight text-dark-blue leading-[1.2] md:leading-[1.1] mb-4">
+              Ganhe tempo e qualidade nas <br className="hidden md:block" /> <span className="text-gradient inline-block md:mt-2">licitações e <br className="hidden md:block" /> contratos.</span>
             </h1>
-            <h2 className="text-xl md:text-2xl font-medium text-primary-cyan leading-relaxed">
-              Ganhe tempo e qualidade nas licitações e contratos.
-            </h2>
 
             <p className="text-lg text-slate-600 max-w-lg leading-relaxed pt-2">
               Obtenha respostas precisas e documentos técnicos com agilidade incomparável.
@@ -207,7 +204,7 @@ export default function Home() {
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
                 Tire dúvidas jurídicas ou operacionais sobre licitações e contratos e obtenha respostas claras e justificadas quando quiser.
               </p>
-              <Link href="#modulo-consultoria" className="text-primary-cyan font-semibold text-sm hover:underline flex items-center gap-1 group-hover:gap-2 transition-all">
+              <Link href="#banco-exclusivo" className="text-primary-cyan font-semibold text-sm hover:underline flex items-center gap-1 group-hover:gap-2 transition-all">
                 Saiba mais <ChevronRight size={14} />
               </Link>
             </div>
@@ -337,7 +334,7 @@ export default function Home() {
             <p className="text-lg text-slate-600 leading-relaxed mb-8">
               Permite aos usuários enviar documentos de contratação já existentes, como editais de licitação, e receber uma análise estruturada de conformidade jurídica. O sistema submete o documento a uma série de verificações desenvolvidas pela equipe especializada da licito.guru, gerando alertas de risco em diferentes níveis de gravidade, juntamente com sugestões concretas de revisão e aprimoramento. Faça o teste!
             </p>
-            <Button href="https://api.whatsapp.com/send/?phone=554198002461&text=Gostaria+de+conhecer+o+m%C3%B3dulo+de+Consultoria!&type=phone_number&app_absent=0" target="_blank">Conhecer Consultoria</Button>
+            <Button href="https://api.whatsapp.com/send/?phone=554198002461&text=Gostaria+de+conhecer+o+m%C3%B3dulo+Analisador+de+Documentos!&type=phone_number&app_absent=0" target="_blank">Conhecer Analisador de Documentos</Button>
           </div>
 
           <img

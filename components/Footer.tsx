@@ -46,9 +46,12 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="border-t border-slate-200 pt-8 flex justify-center items-center text-[10px] text-slate-400">
-                    <p className="text-center w-full">
+                <div className="border-t border-slate-200 pt-8 flex flex-col justify-center items-center text-[10px] text-slate-400 gap-2 text-center">
+                    <p>
                         Direitos Reservados ©️ {new Date().getFullYear()} | licito.guru - CNPJ: 59.743.095/0001-86 | Av. Osvaldo Rodrigues Cabral, 1570, Centro, Florianópolis – SC, CEP 88015-710
+                    </p>
+                    <p>
+                        Site desenvolvido por <a href="https://www.pastelapps.dev/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-cyan transition-colors font-bold">Pastel Apps</a>
                     </p>
                 </div>
             </div>
