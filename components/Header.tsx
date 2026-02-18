@@ -18,7 +18,7 @@ export default function Header() {
 
     return (
         <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/80 backdrop-blur-md shadow-sm border-b border-slate-100/50" : "bg-transparent"}`}>
-            <div className="container mx-auto px-6 h-20 flex items-center justify-between">
+            <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-6 h-20 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                     <img src="/Logo licito.guru IA.png" alt="licito.guru Logo" className="h-16 w-auto object-contain" />
                 </div>
@@ -54,7 +54,7 @@ export default function Header() {
                 className={`lg:hidden absolute top-[100%] left-0 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all duration-300 origin-top ${isOpen ? "opacity-100 scale-y-100 py-6" : "opacity-0 scale-y-0 h-0 overflow-hidden"
                     }`}
             >
-                <div className="container mx-auto px-6 flex flex-col space-y-4">
+                <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-6 flex flex-col space-y-4">
                     <Link
                         href="https://ai.licito.guru/"
                         className="w-full text-center text-lg font-bold text-slate-700 bg-slate-50 border border-slate-200 px-6 py-3 rounded-full hover:bg-slate-100 hover:text-primary-cyan transition-colors"

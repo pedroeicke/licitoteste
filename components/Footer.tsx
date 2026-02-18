@@ -4,7 +4,7 @@ import { Mail, MessageCircle, MapPin, Phone } from "lucide-react";
 export default function Footer() {
     return (
         <footer className="bg-slate-50 pt-16 pb-8 border-t border-slate-200">
-            <div className="container mx-auto px-6">
+            <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12">
                     {/* Brand */}
                     <div>

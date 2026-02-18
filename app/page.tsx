@@ -57,7 +57,7 @@ export default function Home() {
       {/* =========================================
           HERO SECTION
       ========================================= */}
-      <section id="home" className="relative min-h-[100dvh] flex items-center pt-20 pb-8 md:pb-0 px-6 bg-slate-50 overflow-hidden">
+      <section id="home" className="relative min-h-[100dvh] flex items-center pt-20 pb-8 md:pb-0 bg-slate-50 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute top-0 right-0 w-full h-full opacity-30 pointer-events-none">
           <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-br from-primary-cyan/10 to-blue-100/20 rounded-full blur-[80px]"></div>
@@ -67,7 +67,7 @@ export default function Home() {
 
 
 
-        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
+        <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 xl:gap-12 items-center relative z-10">
           {/* Decorative Dots Hero */}
           <div className="absolute top-0 -left-24 opacity-60 hidden xl:block">
             <DecorativeDots width={4} height={6} color="cyan" />
@@ -75,11 +75,11 @@ export default function Home() {
           <div
             className="space-y-6"
           >
-            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold tracking-tight text-dark-blue leading-[1.2] md:leading-[1.1] mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] xl:text-5xl 2xl:text-6xl font-bold tracking-tight text-dark-blue leading-[1.2] md:leading-[1.15] 2xl:leading-[1.1] mb-4">
               Ganhe tempo e qualidade nas <br className="hidden md:block" /> <span className="text-gradient inline-block md:mt-2">licitações e <br className="hidden md:block" /> contratos.</span>
             </h1>
 
-            <p className="text-lg text-slate-600 max-w-lg leading-relaxed pt-2">
+            <p className="text-base sm:text-lg text-slate-600 max-w-lg leading-relaxed pt-2">
               Obtenha respostas precisas e documentos técnicos com agilidade incomparável.
             </p>
 
@@ -100,7 +100,7 @@ export default function Home() {
               {/* Glow Effect */}
               <div className="absolute -inset-4 bg-gradient-to-tr from-primary-cyan/30 to-primary-green/30 rounded-[30px] blur-2xl -z-10 translate-y-4"></div>
 
-              <MockupWindow className="shadow-2xl shadow-cyan-900/10 h-auto aspect-[4/3] md:h-[500px]">
+              <MockupWindow className="shadow-2xl shadow-cyan-900/10 h-auto aspect-[4/3] sm:h-[300px] md:h-[350px] lg:h-[380px] xl:h-[450px] 2xl:h-[500px]">
                 <div className="relative w-full h-full bg-slate-900 overflow-hidden">
                   <video
                     className="w-full h-full object-cover"
@@ -123,7 +123,7 @@ export default function Home() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1 }}
-                className="absolute -right-4 md:-right-6 top-0 bg-white/90 backdrop-blur-sm p-2 md:p-4 rounded-lg md:rounded-xl shadow-xl border border-slate-100 flex items-center gap-2 md:gap-3"
+                className="absolute right-0 lg:-right-2 xl:-right-4 top-0 bg-white/90 backdrop-blur-sm p-2 md:p-3 lg:p-4 rounded-lg md:rounded-xl shadow-xl border border-slate-100 flex items-center gap-2 md:gap-3"
               >
                 <div className="w-7 h-7 md:w-10 md:h-10 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg shadow-green-500/30">
                   <ShieldCheck size={14} className="text-white md:hidden" />
@@ -147,9 +147,9 @@ export default function Home() {
           MODULES OVERVIEW
       ========================================= */}
       <section className="py-24 bg-white relative">
-        <div className="container mx-auto px-6 relative">
+        <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-6 relative">
           <div className="text-center mb-12 md:mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-blue mb-4">Nossa Tecnologia</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-blue mb-4">Nossa Tecnologia</h2>
             <p className="text-slate-500 max-w-4xl mx-auto">
               Módulos desenvolvidos para gerar segurança jurídica e agilidade nos processos licitatorios
             </p>
@@ -163,9 +163,9 @@ export default function Home() {
             <DecorativeDots width={6} height={3} color="cyan" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 relative z-10">
             {/* Module 1 */}
-            <div className="group glass-card p-6 md:p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 neon-hover">
+            <div className="group glass-card p-5 sm:p-6 md:p-7 lg:p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 neon-hover">
               <div className="w-14 h-14 bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Copy className="text-primary-cyan w-7 h-7" />
               </div>
@@ -179,7 +179,7 @@ export default function Home() {
             </div>
 
             {/* Module 2 */}
-            <div className="group glass-card p-6 md:p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 neon-hover relative overflow-hidden">
+            <div className="group glass-card p-5 sm:p-6 md:p-7 lg:p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 neon-hover relative overflow-hidden">
               <div className="absolute top-0 right-0 p-3">
                 <span className="bg-primary-cyan/20 text-primary-cyan text-[10px] font-bold px-2 py-1 rounded-full uppercase border border-primary-cyan/20">Destaque</span>
               </div>
@@ -196,7 +196,7 @@ export default function Home() {
             </div>
 
             {/* Module 3 */}
-            <div className="group glass-card p-6 md:p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 neon-hover">
+            <div className="group glass-card p-5 sm:p-6 md:p-7 lg:p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 neon-hover">
               <div className="w-14 h-14 bg-indigo-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <MessageCircle className="text-indigo-500 w-7 h-7" />
               </div>
@@ -216,11 +216,11 @@ export default function Home() {
            GERADOR SECTION
       ========================================= */}
       <section id="gerador" className="py-24 bg-slate-50">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 xl:gap-16 items-center">
             <div>
               <span className="bg-gradient-primary text-dark-blue font-bold tracking-wider uppercase text-xs mb-4 inline-block px-3 py-1 rounded-full">Módulo gerador de documentos</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-dark-blue mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-blue mb-6">
                 Semanas de trabalho <br />
                 <span className="text-gradient">em poucos minutos.</span>
               </h2>
@@ -286,8 +286,8 @@ export default function Home() {
           IA PERSONALIZADA SECTION
       ========================================= */}
       <section id="ia-personalizada" className="py-24 bg-white">
-        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-          <div className="order-2 md:order-1 relative">
+        <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 xl:gap-16 items-center">
+          <div className="order-2 lg:order-1 relative">
             <div className="absolute -inset-4 bg-gradient-to-br from-green-200 to-emerald-100 rounded-[2rem] opacity-30 blur-xl"></div>
             <MockupWindow className="relative z-10 shadow-2xl border-slate-200/60 md:h-auto">
               <div className="relative w-full h-full aspect-[1920/950] bg-slate-900 overflow-hidden">
@@ -306,13 +306,13 @@ export default function Home() {
             </MockupWindow>
           </div>
 
-          <div className="order-1 md:order-2">
+          <div className="order-1 lg:order-2">
             <span className="bg-gradient-primary text-dark-blue font-bold tracking-wider uppercase text-xs mb-4 inline-block px-3 py-1 rounded-full">Customização</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-blue mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-blue mb-6">
               Sua IA, Suas Regras. <br />
               <span className="text-gradient">Totalmente Customizável.</span>
             </h2>
-            <p className="text-lg text-slate-600 leading-relaxed mb-8">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-8">
               A licito.guru IA pode ser customizada para o seu órgão, com os seus editais, contratos, documentos técnicos, pareceres jurídicos e normas internas, tudo isso customizado com a identidade do seu órgão.
             </p>
             <Button href="https://api.whatsapp.com/send/?phone=554198002461&text=Tenho+interesse+em+uma+IA+Exclusiva+para+meu+%C3%B3rg%C3%A3o!&type=phone_number&app_absent=0" target="_blank">Peça sua IA Exclusiva</Button>
@@ -324,14 +324,14 @@ export default function Home() {
            MODULO CONSULTORIA SECTION
       ========================================= */}
       <section id="modulo-consultoria" className="py-24 bg-slate-50">
-        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+        <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 xl:gap-16 items-center">
           <div>
             <span className="bg-gradient-primary text-dark-blue font-bold tracking-wider uppercase text-xs mb-4 inline-block px-3 py-1 rounded-full">Módulo Analisador de Documentos</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-blue mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-blue mb-6">
               Evite Riscos Jurídicos. <br />
               <span className="text-gradient">Analise Seus Editais em Instantes.</span>
             </h2>
-            <p className="text-lg text-slate-600 leading-relaxed mb-8">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-8">
               Permite aos usuários enviar documentos de contratação já existentes, como editais de licitação, e receber uma análise estruturada de conformidade jurídica. O sistema submete o documento a uma série de verificações desenvolvidas pela equipe especializada da licito.guru, gerando alertas de risco em diferentes níveis de gravidade, juntamente com sugestões concretas de revisão e aprimoramento. Faça o teste!
             </p>
             <Button href="https://api.whatsapp.com/send/?phone=554198002461&text=Gostaria+de+conhecer+o+m%C3%B3dulo+Analisador+de+Documentos!&type=phone_number&app_absent=0" target="_blank">Conhecer Analisador de Documentos</Button>
@@ -352,15 +352,15 @@ export default function Home() {
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-cyan rounded-full mix-blend-screen filter blur-[100px] opacity-10 animate-blob"></div>
 
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-4 md:gap-16">
+        <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16">
             {/* Text Content */}
             <div className="space-y-8 pb-0 md:pb-24">
               <div className="inline-block px-4 py-1.5 rounded-full border border-primary-cyan/30 bg-primary-cyan/10 text-primary-cyan text-xs font-bold uppercase tracking-wider">
                 Módulo Consultoria
               </div>
 
-              <h2 className="text-2xl md:text-5xl font-bold text-white leading-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-5xl font-bold text-white leading-tight">
                 IA especializada com <br />
                 <span className="text-primary-cyan">Banco de Dados Exclusivo</span>
               </h2>
@@ -410,9 +410,9 @@ export default function Home() {
           CLIENTS SECTION
       ========================================= */}
       <section id="clientes" className="pt-10 pb-16 md:py-16 bg-white border-b border-slate-100">
-        <div className="container mx-auto px-6 mb-8 text-center">
+        <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-6 mb-8 text-center">
 
-          <h2 className="text-4xl font-bold text-dark-blue">Quem confia na gente</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl 2xl:text-4xl font-bold text-dark-blue">Quem confia na gente</h2>
         </div>
         <ClientsCarousel logos={logos} />
       </section>
@@ -428,14 +428,14 @@ export default function Home() {
            CONTACT SECTION
        ========================================= */}
       <section id="contato" className="py-24 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16">
+        <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 xl:gap-16">
             {/* Contact Info */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-dark-blue mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl 2xl:text-5xl font-bold text-dark-blue mb-6">
                 Vamos conversar?
               </h2>
-              <p className="text-lg text-slate-600 mb-10 leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-600 mb-10 leading-relaxed">
                 Agende uma demonstração gratuita e descubra como a IA <br /> pode revolucionar o setor de compras do seu órgão.
               </p>
 
@@ -484,7 +484,7 @@ export default function Home() {
             </div>
 
             {/* Form */}
-            <div className="bg-slate-50 p-6 md:p-10 rounded-3xl shadow-lg border border-slate-100 relative overflow-hidden">
+            <div className="bg-slate-50 p-5 sm:p-6 md:p-8 lg:p-10 rounded-3xl shadow-lg border border-slate-100 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary-cyan/10 rounded-full blur-3xl -mr-10 -mt-10"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-primary-green/10 rounded-full blur-3xl -ml-10 -mb-10"></div>
 
@@ -494,7 +494,7 @@ export default function Home() {
                   <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">Nome Completo</label>
                   <input type="text" id="name" className="w-full px-4 py-3 rounded-lg bg-white border border-slate-200 focus:ring-2 focus:ring-primary-cyan focus:border-transparent outline-none transition-all placeholder:text-slate-400" placeholder="Seu nome" />
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="org" className="block text-sm font-semibold text-slate-700 mb-2">Órgão / Empresa</label>
                     <input type="text" id="org" className="w-full px-4 py-3 rounded-lg bg-white border border-slate-200 focus:ring-2 focus:ring-primary-cyan focus:border-transparent outline-none transition-all placeholder:text-slate-400" placeholder="Ex: Prefeitura de..." />
@@ -532,8 +532,8 @@ export default function Home() {
           FAQ SECTION
       ========================================= */}
       <section id="faq" className="py-24 bg-slate-50">
-        <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="text-3xl font-bold text-center mb-4 text-dark-blue">Perguntas Frequentes</h2>
+        <div className="w-full max-w-3xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 text-dark-blue">Perguntas Frequentes</h2>
           <p className="text-center text-slate-600 mb-12">Tire suas dúvidas sobre a plataforma líder em IA para licitações.</p>
 
           <div className="space-y-4">
@@ -556,12 +556,12 @@ export default function Home() {
            PURPOSE SECTION
        ========================================= */}
       <section className="py-24 bg-white">
-        <div className="container mx-auto px-6">
+        <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-6">
           <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-dark-blue leading-tight mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-dark-blue leading-tight mb-6">
               O propósito da licito.guru é vencer a <span className="text-gradient">insegurança jurídica</span> e a <span className="text-gradient">burocracia</span> nas licitações e nos contratos.
             </h2>
-            <h3 className="text-2xl md:text-3xl font-bold text-primary-green mb-10">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-green mb-10">
               Vem fazer parte desse movimento!
             </h3>
             <Button href="https://api.whatsapp.com/send/?phone=554198002461&text=Quero+agendar+uma+Demonstra%C3%A7%C3%A3o!&type=phone_number&app_absent=0" target="_blank">Agende uma Demonstração Agora</Button>
@@ -580,9 +580,9 @@ function FAQItem({ question, answer }: { question: string, answer: string }) {
     <div className="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between p-6 text-left"
+        className="w-full flex items-center justify-between p-4 sm:p-5 md:p-6 text-left"
       >
-        <span className="font-bold text-dark-blue text-lg">{question}</span>
+        <span className="font-bold text-dark-blue text-base sm:text-lg">{question}</span>
         {isOpen ? <Minus className="text-primary-cyan shrink-0" /> : <Plus className="text-slate-400 shrink-0" />}
       </button>
       <div
