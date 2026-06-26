@@ -19,9 +19,9 @@ export default function Header() {
     return (
         <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/80 backdrop-blur-md shadow-sm border-b border-slate-100/50" : "bg-transparent"}`}>
             <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-6 h-20 flex items-center justify-between">
-                <div className="flex items-center gap-2">
+                <Link href="/" className="flex items-center gap-2" aria-label="Ir para a página inicial">
                     <img src="/Logo licito.guru IA.png" alt="licito.guru Logo" className="h-16 w-auto object-contain" />
-                </div>
+                </Link>
                 {/* Desktop Nav */}
                 <nav className="hidden lg:flex items-center gap-4">
                     <Link

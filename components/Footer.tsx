@@ -1,14 +1,14 @@
 import Link from "next/link";
-import { Mail, MessageCircle, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function Footer() {
     return (
         <footer className="bg-slate-50 pt-16 pb-8 border-t border-slate-200">
-            <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-6">
+            <div className="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12">
                     {/* Brand */}
                     <div>
-                        <Link href="#home" className="inline-block mb-4">
+                        <Link href="/" className="inline-block mb-4">
                             <img src="/Logo licito.guru IA.png" alt="licito.guru Logo" className="h-20 w-auto object-contain" />
                         </Link>
 
@@ -18,11 +18,12 @@ export default function Footer() {
                     <div>
                         <h3 className="font-bold text-dark-blue mb-6">Navegação</h3>
                         <ul className="space-y-3 text-sm text-slate-600">
-                            <li><Link href="#home" className="hover:text-primary-cyan transition-colors">Home</Link></li>
-                            <li><Link href="#gerador" className="hover:text-primary-cyan transition-colors">Gerador de Documentos</Link></li>
-                            <li><Link href="#ia-personalizada" className="hover:text-primary-cyan transition-colors">IA Personalizada</Link></li>
-                            <li><Link href="#banco-exclusivo" className="hover:text-primary-cyan transition-colors">Banco Exclusivo</Link></li>
-                            <li><Link href="#faq" className="hover:text-primary-cyan transition-colors">Perguntas Frequentes</Link></li>
+                            <li><Link href="/#home" className="hover:text-primary-cyan transition-colors">Home</Link></li>
+                            <li><Link href="/#gerador" className="hover:text-primary-cyan transition-colors">Gerador de Documentos</Link></li>
+                            <li><Link href="/#ia-personalizada" className="hover:text-primary-cyan transition-colors">IA Personalizada</Link></li>
+                            <li><Link href="/#banco-exclusivo" className="hover:text-primary-cyan transition-colors">Banco Exclusivo</Link></li>
+                            <li><Link href="/#faq" className="hover:text-primary-cyan transition-colors">Perguntas Frequentes</Link></li>
+                            <li><Link href="/lgpd" className="hover:text-primary-cyan transition-colors">LGPD</Link></li>
                         </ul>
                     </div>
 
