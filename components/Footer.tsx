@@ -5,7 +5,7 @@ export default function Footer() {
     return (
         <footer className="bg-slate-50 pt-16 pb-8 border-t border-slate-200">
             <div className="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-6">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
                     {/* Brand */}
                     <div>
                         <Link href="/" className="inline-block mb-4">
@@ -24,6 +24,17 @@ export default function Footer() {
                             <li><Link href="/#banco-exclusivo" className="hover:text-primary-cyan transition-colors">Banco Exclusivo</Link></li>
                             <li><Link href="/#faq" className="hover:text-primary-cyan transition-colors">Perguntas Frequentes</Link></li>
                             <li><Link href="/lgpd" className="hover:text-primary-cyan transition-colors">LGPD</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Documents */}
+                    <div>
+                        <h3 className="font-bold text-dark-blue mb-6">Documentos</h3>
+                        <ul className="space-y-3 text-sm text-slate-600">
+                            <li><a href="/documentos/termos-de-uso.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-primary-cyan transition-colors">Termos de Uso</a></li>
+                            <li><a href="/documentos/politica-de-privacidade.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-primary-cyan transition-colors">Política de Privacidade</a></li>
+                            <li><a href="/documentos/politica-de-cookies.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-primary-cyan transition-colors">Política de Cookies</a></li>
+                            <li><Link href="/lgpd" className="hover:text-primary-cyan transition-colors">Proteção de Dados (LGPD)</Link></li>
                         </ul>
                     </div>
 

@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -10,13 +11,18 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
   title: "licito.guru | Inteligência Artificial para Licitações",
   description: "Ganhe tempo e qualidade nas licitações e contratos com nossa IA especializada.",
   icons: {
     icon: "/favicon.png",
   },
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 };
 
 export default function RootLayout({
@@ -32,6 +38,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );

@@ -3,8 +3,10 @@ import type { ReactNode } from "react";
 import LGPDSectionNav from "@/components/LGPDSectionNav";
 import {
   ArrowUpRight,
+  CalendarClock,
   CheckCircle2,
   ClipboardCheck,
+  Download,
   FileText,
   Landmark,
   Mail,
@@ -76,8 +78,39 @@ const sections = [
   { href: "#visao-geral", label: "Visão geral" },
   { href: "#encarregado", label: "Encarregado de Dados" },
   { href: "#direitos", label: "Direitos do Titular" },
-  { href: "#legislacao", label: "Legislação" },
+  { href: "#legislacao", label: "Legislação e Documentos" },
   { href: "#implementacao", label: "Implementação" },
+];
+
+const LAST_UPDATED = "26 de junho de 2026";
+
+const legislation = [
+  {
+    label: "LGPD – Lei nº 13.709/2018",
+    href: "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+  },
+  {
+    label: "Normas e orientações emitidas pela Autoridade Nacional de Proteção de Dados – ANPD",
+    href: "https://www.gov.br/anpd/pt-br",
+  },
+];
+
+const documents = [
+  {
+    label: "Termos de Uso",
+    description: "Condições gerais de acesso, navegação e uso da plataforma.",
+    href: "/documentos/termos-de-uso.pdf",
+  },
+  {
+    label: "Política de Privacidade",
+    description: "Como tratamos, protegemos e compartilhamos seus dados pessoais.",
+    href: "/documentos/politica-de-privacidade.pdf",
+  },
+  {
+    label: "Política de Cookies",
+    description: "Uso de cookies e tecnologias semelhantes no site e na plataforma.",
+    href: "/documentos/politica-de-cookies.pdf",
+  },
 ];
 
 export default function LGPDPage() {
@@ -98,6 +131,10 @@ export default function LGPDPage() {
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl">
                 A licito.guru, em atendimento ao que determina a Lei Federal nº 13.709, de 14 de agosto de 2018,
                 a Lei Geral de Proteção de Dados Pessoais (LGPD), apresenta sua página de Proteção de Dados Pessoais.
+              </p>
+              <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-500 shadow-sm">
+                <CalendarClock className="h-4 w-4 text-primary-cyan" />
+                Última atualização: {LAST_UPDATED}
               </p>
             </div>
 
@@ -206,27 +243,57 @@ export default function LGPDPage() {
               </p>
             </ContentSection>
 
-            <ContentSection id="legislacao" icon={Landmark} title="Legislação">
+            <ContentSection id="legislacao" icon={Landmark} title="Legislação e Documentos">
               <p>Mais informações podem ser obtidas na legislação aplicável:</p>
               <div className="grid grid-cols-1 gap-3">
-                {[
-                  "LGPD",
-                  "Nomeação do Encarregado de Dados",
-                  "Normas e orientações emitidas pela Autoridade Nacional de Proteção de Dados – ANPD",
-                ].map((item, index) => (
-                  <div
-                    key={item}
-                    className="group relative overflow-hidden rounded-lg border border-slate-200 bg-slate-50 p-4 transition-all duration-300 hover:border-primary-cyan/50 hover:bg-white hover:shadow-md hover:shadow-cyan-900/5"
+                {legislation.map((item, index) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative block overflow-hidden rounded-lg border border-slate-200 bg-slate-50 p-4 transition-all duration-300 hover:border-primary-cyan/50 hover:bg-white hover:shadow-md hover:shadow-cyan-900/5"
                   >
                     <div className="absolute inset-y-0 left-0 w-1 bg-gradient-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     <div className="flex items-center gap-4">
                       <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white text-xs font-bold text-primary-cyan ring-1 ring-slate-200 transition-colors duration-300 group-hover:ring-primary-cyan/30">
                         {String(index + 1).padStart(2, "0")}
                       </span>
-                      <p className="flex-1 text-sm sm:text-base font-bold leading-snug text-dark-blue">{item}</p>
+                      <p className="flex-1 text-sm sm:text-base font-bold leading-snug text-dark-blue">{item.label}</p>
                       <ArrowUpRight className="h-4 w-4 shrink-0 text-slate-300 transition-colors duration-300 group-hover:text-primary-cyan" />
                     </div>
-                  </div>
+                  </a>
+                ))}
+              </div>
+
+              <div className="pt-3 border-t border-slate-100">
+                <p className="text-base font-bold text-dark-blue">Documentos da licito.guru</p>
+                <p className="mt-1 text-sm text-slate-500 leading-relaxed">
+                  Documentos oficiais sobre o uso da plataforma e o tratamento de dados pessoais. Todos abrem em uma
+                  nova aba, em formato PDF.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 gap-3">
+                {documents.map((doc) => (
+                  <a
+                    key={doc.href}
+                    href={doc.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative block overflow-hidden rounded-lg border border-slate-200 bg-slate-50 p-4 transition-all duration-300 hover:border-primary-cyan/50 hover:bg-white hover:shadow-md hover:shadow-cyan-900/5"
+                  >
+                    <div className="absolute inset-y-0 left-0 w-1 bg-gradient-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    <div className="flex items-center gap-4">
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white text-primary-cyan ring-1 ring-slate-200 transition-colors duration-300 group-hover:ring-primary-cyan/30">
+                        <FileText className="h-5 w-5" />
+                      </span>
+                      <div className="flex-1">
+                        <p className="text-sm sm:text-base font-bold leading-snug text-dark-blue">{doc.label}</p>
+                        <p className="mt-0.5 text-xs sm:text-sm text-slate-500 leading-snug">{doc.description}</p>
+                      </div>
+                      <Download className="h-4 w-4 shrink-0 text-slate-300 transition-colors duration-300 group-hover:text-primary-cyan" />
+                    </div>
+                  </a>
                 ))}
               </div>
             </ContentSection>
